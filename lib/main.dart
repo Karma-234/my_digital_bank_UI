@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    try{
-       print(55~/0);
-    }catch(e){
-      print(e);
-    }
+    // try{
+    //    print(55~/0);
+    // }catch(e){
+    //   print(e);
+    // }
     return MaterialApp(
       title: 'Flutter Demo 2',
       theme: ThemeData(
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
-    
+
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
