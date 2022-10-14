@@ -8,19 +8,21 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.secondary,
-        body: DecoratedBox(
-          decoration: BoxDecoration(
-            image:
-                DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
-          ),
-          child: Center(
-              child: Image.asset(
+      backgroundColor: AppColors.secondary,
+      body: DecoratedBox(
+        decoration: BoxDecoration(
+          image:
+              DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
+        ),
+        child: Center(
+          child: Image.asset(
             'logo'.png,
             width: 148,
             fit: BoxFit.contain,
-          )),
-        ));
+          ),
+        ),
+      ),
+    );
   }
 }
 
