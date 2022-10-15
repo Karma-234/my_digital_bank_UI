@@ -28,10 +28,11 @@ class NewPasswordPage extends StatelessWidget {
                       color: AppColors.onButton,
                     ),
                   ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                      hintText: 'Enter Password',
-                      suffixText: 'Show',
+                  TextField(
+                    decoration: InputDecoration(
+                      border: const OutlineInputBorder(
+                        borderSide: BorderSide(),
+                      ),
                     ),
                   ),
                   Row(
