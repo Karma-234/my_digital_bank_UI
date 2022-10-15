@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kml_digital_bank/features/onboarding/password_reset/views/new_password.dart';
+import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_reset.dart';
 
-import 'features/onboarding/app_tour/views/splash_page.dart';
+import 'features/onboarding/landing_page/views/landing_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -16,7 +18,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SplashPage(),
+      home: const PhoneNumberPage(),
     );
   }
 }
