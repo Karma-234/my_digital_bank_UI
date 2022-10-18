@@ -20,30 +20,49 @@ class PhoneNumberPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SafeArea(
-                child: CommonBackIcon(iconColor: AppColors.onButton),
-              ),
-              Text(
-                'Password Reset',
-                style: GoogleFonts.inter(
-                  fontSize: 24.0,
-                  color: AppColors.onButton,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 27.0),
+                  child: CommonBackIcon(iconColor: AppColors.onButton),
                 ),
               ),
-              Text(
-                passReset,
-                style: GoogleFonts.inter(
-                  color: AppColors.textColor,
+              Padding(
+                padding: const EdgeInsets.only(left: 31.0, right: 44.0),
+                child: Text(
+                  'Password Reset',
+                  style: GoogleFonts.inter(
+                    fontSize: 24.0,
+                    color: AppColors.onButton,
+                  ),
                 ),
               ),
-              TextFormField(
-                keyboardType: TextInputType.number,
-                maxLength: 10,
-                decoration: const InputDecoration(
-                  iconColor: AppColors.onButton,
-                  suffixIcon: Icon(Icons.check),
-                  suffixIconColor: AppColors.onButton,
-                  prefixIcon: Icon(Icons.flag),
-                  prefixText: '+234',
+              Padding(
+                padding: const EdgeInsets.only(left: 32.0, right: 19.0),
+                child: Text(
+                  passReset,
+                  style: GoogleFonts.inter(
+                    color: AppColors.textColor,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 58.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 34.0, right: 32.33),
+                child: TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLength: 10,
+                  decoration: const InputDecoration(
+                    iconColor: AppColors.onButton,
+                    suffixIcon: Icon(Icons.check),
+                    suffixIconColor: AppColors.onButton,
+                    prefixIcon: Icon(Icons.flag),
+                    prefixText: '+234',
+                    enabled: true,
+                    border: UnderlineInputBorder(
+                      borderSide: BorderSide(color: AppColors.onButton),
+                    ),
+                  ),
                 ),
               ),
               Row(
@@ -58,7 +77,11 @@ class PhoneNumberPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Center(
+              const SizedBox(
+                height: 91.0,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 35.0, left: 29.0),
                 child: ResetPasswordButton(
                   text: 'Recover Password',
                   buttonPressed: () {},

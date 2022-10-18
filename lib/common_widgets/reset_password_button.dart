@@ -17,7 +17,7 @@ class ResetPasswordButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: buttonPressed,
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(313.0, 48.0),
+        fixedSize: const Size(311.0, 48.0),
         backgroundColor: AppColors.onButton,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),

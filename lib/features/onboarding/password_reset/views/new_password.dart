@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kml_digital_bank/common_widgets/reset_password_button.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 
+import '../../../../common_widgets/password_form_field.dart';
+
 class NewPasswordPage extends StatelessWidget {
   const NewPasswordPage({super.key});
 
@@ -15,72 +17,74 @@ class NewPasswordPage extends StatelessWidget {
           const SizedBox(
             height: 153.0,
           ),
-          Form(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 32.0, right: 30.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'New Password',
-                    style: GoogleFonts.inder(
-                      fontSize: 24.0,
-                      color: AppColors.onButton,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 42.0,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        isDense: true,
-                        hintText: 'New Password',
-                        suffixText: 'Show'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'New Password',
-                        style: GoogleFonts.inter(
-                          fontSize: 14.0,
-                          color: AppColors.onButton,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 35.0,
-                  ),
-                  TextFormField(
-                    decoration: const InputDecoration(
-                        isDense: true,
-                        hintText: 'Confirm Password',
-                        suffixText: 'Show'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Confirm Password',
-                        style: GoogleFonts.inter(
-                          fontSize: 14.0,
-                          color: AppColors.onButton,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 67.0,
-                  ),
-                  Center(
-                    child: ResetPasswordButton(
-                      text: 'Recover Password',
-                      buttonPressed: () {},
-                    ),
-                  ),
-                ],
+          Padding(
+            padding: const EdgeInsets.only(left: 35.0),
+            child: Text(
+              'New Password',
+              style: GoogleFonts.inder(
+                fontSize: 24.0,
+                color: AppColors.onButton,
               ),
+            ),
+          ),
+          Form(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  height: 42.0,
+                ),
+                const SizedBox(
+                  width: 308.67,
+                  child: NewPasswordFormField(
+                    hintPass: 'New Password',
+                  ),
+                ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 260.0,
+                    ),
+                    Text(
+                      'New Password',
+                      style: GoogleFonts.inter(
+                        fontSize: 14.0,
+                        color: AppColors.onButton,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 35.0,
+                ),
+                const SizedBox(
+                  width: 308.67,
+                  child: NewPasswordFormField(hintPass: 'Confirm Password'),
+                ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 240.0,
+                    ),
+                    Text(
+                      'Confirm Password',
+                      style: GoogleFonts.inter(
+                        fontSize: 14.0,
+                        color: AppColors.onButton,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 67.0,
+                ),
+                Center(
+                  child: ResetPasswordButton(
+                    text: 'Recover Password',
+                    buttonPressed: () {},
+                  ),
+                ),
+              ],
             ),
           ),
         ],

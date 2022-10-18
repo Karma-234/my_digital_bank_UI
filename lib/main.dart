@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/new_password.dart';
+import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_change_success.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_reset.dart';
 
 import 'features/onboarding/landing_page/views/landing_page.dart';
@@ -18,7 +19,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const NewPasswordPage(),
+      home: const PasswordSuccess(),
     );
   }
 }
