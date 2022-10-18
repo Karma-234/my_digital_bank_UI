@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kml_digital_bank/common_widgets/common_icons.dart';
 
@@ -22,7 +23,7 @@ class PhoneNumberPage extends StatelessWidget {
               const SafeArea(
                 child: Padding(
                   padding: EdgeInsets.only(left: 27.0),
-                  child: CommonBackIcon(iconColor: AppColors.onButton),
+                  child: CommonBackIcon(iconColor: AppColors.secondary),
                 ),
               ),
               Padding(
@@ -31,7 +32,7 @@ class PhoneNumberPage extends StatelessWidget {
                   'Password Reset',
                   style: GoogleFonts.inter(
                     fontSize: 24.0,
-                    color: AppColors.onButton,
+                    color: AppColors.secondary,
                   ),
                 ),
               ),
@@ -51,16 +52,19 @@ class PhoneNumberPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 34.0, right: 32.33),
                 child: TextFormField(
                   keyboardType: TextInputType.number,
-                  maxLength: 10,
+                  inputFormatters: [
+                    LengthLimitingTextInputFormatter(10),
+                    FilteringTextInputFormatter.singleLineFormatter
+                  ],
                   decoration: const InputDecoration(
-                    iconColor: AppColors.onButton,
+                    iconColor: AppColors.secondary,
                     suffixIcon: Icon(Icons.check),
-                    suffixIconColor: AppColors.onButton,
+                    suffixIconColor: AppColors.secondary,
                     prefixIcon: Icon(Icons.flag),
                     prefixText: '+234',
                     enabled: true,
                     border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.onButton),
+                      borderSide: BorderSide(color: AppColors.secondary),
                     ),
                   ),
                 ),
@@ -71,7 +75,7 @@ class PhoneNumberPage extends StatelessWidget {
                   Text(
                     'Phone Number',
                     style: GoogleFonts.inter(
-                      color: AppColors.onButton,
+                      color: AppColors.secondary,
                       fontSize: 16.0,
                     ),
                   ),

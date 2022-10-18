@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/new_password.dart';
+import 'package:kml_digital_bank/features/onboarding/password_reset/views/otp_page.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_change_success.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_reset.dart';
 
@@ -15,11 +16,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'KML Digita Bank',
+      title: 'KML Digital Bank',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PasswordSuccess(),
+      home: const OtpPage(),
     );
   }
 }

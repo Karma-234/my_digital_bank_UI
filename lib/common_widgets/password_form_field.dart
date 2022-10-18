@@ -16,14 +16,14 @@ class NewPasswordFormField extends StatelessWidget {
         disabledBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             width: 2.0,
-            color: AppColors.onButton,
+            color: AppColors.secondary,
           ),
         ),
         enabled: true,
         border: const UnderlineInputBorder(
           borderSide: BorderSide(
             width: 2.0,
-            color: AppColors.onButton,
+            color: AppColors.secondary,
           ),
         ),
       ),
