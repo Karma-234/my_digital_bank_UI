@@ -28,12 +28,14 @@ class NewPasswordPage extends StatelessWidget {
                       color: AppColors.onButton,
                     ),
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide(),
-                      ),
-                    ),
+                  const SizedBox(
+                    height: 42.0,
+                  ),
+                  TextFormField(
+                    decoration: const InputDecoration(
+                        isDense: true,
+                        hintText: 'New Password',
+                        suffixText: 'Show'),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -46,6 +48,9 @@ class NewPasswordPage extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                  const SizedBox(
+                    height: 35.0,
                   ),
                   TextFormField(
                     decoration: const InputDecoration(
@@ -65,9 +70,14 @@ class NewPasswordPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  ResetPasswordButton(
-                    text: 'Recover Password',
-                    buttonPressed: () {},
+                  const SizedBox(
+                    height: 67.0,
+                  ),
+                  Center(
+                    child: ResetPasswordButton(
+                      text: 'Recover Password',
+                      buttonPressed: () {},
+                    ),
                   ),
                 ],
               ),
