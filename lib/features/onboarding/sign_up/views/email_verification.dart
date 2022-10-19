@@ -5,6 +5,8 @@ import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';
 
+import '../../../../common_widgets/forms/email_verification_form.dart';
+
 class EmailVerification extends StatelessWidget {
   const EmailVerification({super.key});
 
@@ -19,39 +21,16 @@ class EmailVerification extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
+              children: const [
+                SizedBox(
                   height: 147.0,
                 ),
-                const SignUpTextHeader(header: 'Email Verification'),
-                const SignUpTextbody(textBody: emailVerBody),
-                const SizedBox(
+                SignUpTextHeader(header: 'Email Verification'),
+                SignUpTextbody(textBody: emailVerBody),
+                SizedBox(
                   height: 94.0,
                 ),
-                Form(
-                  child: Column(
-                    children: [
-                      const InfoInputField(
-                        hintText: 'Enter email',
-                        counterText: 'Email address',
-                        prefixIcon: Icon(
-                          Icons.mail,
-                          color: AppColors.secondary,
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 190.0,
-                      ),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ResetPasswordButton(
-                          text: 'Email OTP code',
-                          buttonPressed: () {},
-                        ),
-                      ),
-                    ],
-                  ),
-                )
+                EmailVerificationForm()
               ],
             ),
           ),
