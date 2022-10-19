@@ -18,29 +18,27 @@ class OtpPage extends StatelessWidget {
       body: ListView(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CommonBackIcon(iconColor: AppColors.secondary),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 82.5,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 36.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                SizedBox(
-                  width: 300.0,
-                  height: 40.0,
-                  child: Text(
-                    'Reset code',
-                    textAlign: TextAlign.left,
-                    style: GoogleFonts.inter(
-                        fontSize: 24.0,
-                        color: AppColors.secondary,
-                        fontWeight: FontWeight.w400),
-                  ),
+                Text(
+                  'Reset code',
+                  textAlign: TextAlign.left,
+                  style: GoogleFonts.inter(
+                      fontSize: 24.0,
+                      color: AppColors.secondary,
+                      fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
                   height: 61.0,
@@ -54,21 +52,26 @@ class OtpPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  width: 278.0,
-                  child: OtpForm(),
-                ),
-                SizedBox(
-                  width: 308.0,
-                  height: 61.0,
-                  child: Text(
-                    'OTP will expire after 00:01:43',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.mandali(
-                      color: AppColors.textColor,
-                      fontSize: 18.0,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      width: 300.0,
+                      child: OtpForm(),
                     ),
-                  ),
+                    SizedBox(
+                      width: 308.0,
+                      height: 61.0,
+                      child: Text(
+                        'OTP will expire after 00:01:43',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.mandali(
+                          color: AppColors.textColor,
+                          fontSize: 18.0,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

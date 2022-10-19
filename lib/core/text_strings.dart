@@ -4,3 +4,7 @@ const String signUpText =
 const String passReset = 'Enter your phone number to recover \nyour password';
 
 const String otpText = 'Key in the 6 digit code we just sent to \n08099990000';
+const String basicInfo =
+    'Please provide your phone number for device validation and sms alerts.';
+const String emailVerBody =
+    'Verify your email address. \nAn OTP code will be sent to your email.';

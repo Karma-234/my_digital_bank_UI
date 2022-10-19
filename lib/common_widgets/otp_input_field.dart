@@ -13,6 +13,8 @@ class OtpInputField extends StatelessWidget {
     return SizedBox(
       width: 38.0,
       child: TextFormField(
+        style: const TextStyle(color: AppColors.secondary, fontSize: 24.0),
+        obscureText: true,
         onChanged: (value) {
           FocusScope.of(context).nextFocus();
         },
@@ -24,13 +26,14 @@ class OtpInputField extends StatelessWidget {
           FilteringTextInputFormatter.digitsOnly,
         ],
         decoration: const InputDecoration(
-          disabledBorder: UnderlineInputBorder(
+          enabled: true,
+          enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.secondary, width: 2.0),
           ),
-          hintText: '0',
           border: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.secondary, width: 2.0),
           ),
+          hintText: '0',
         ),
       ),
     );

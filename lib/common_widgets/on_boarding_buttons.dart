@@ -4,12 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import '../core/app_colors.dart';
 
 class CommonButton extends StatelessWidget {
-  const CommonButton(
-      {Key? key,
-      required this.text,
-      required this.color,
-      required this.buttonPressed})
-      : super(key: key);
+  const CommonButton({
+    Key? key,
+    required this.text,
+    required this.color,
+    required this.buttonPressed,
+  }) : super(key: key);
 
   final String text;
   final Color color;
