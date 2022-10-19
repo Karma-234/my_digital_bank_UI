@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../core/app_colors.dart';
 import '../input_fields/info_input_field.dart';
 import '../buttons/reset_password_button.dart';
 
-class EmailVerificationForm extends StatelessWidget {
-  const EmailVerificationForm({
+class BvnValidationForm extends StatelessWidget {
+  const BvnValidationForm({
     Key? key,
   }) : super(key: key);
 
@@ -13,22 +12,17 @@ class EmailVerificationForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const InfoInputField(
-            hintText: 'Enter email',
-            counterText: 'Email address',
-            prefixIcon: Icon(
-              Icons.mail,
-              color: AppColors.secondary,
-            ),
-          ),
+              hintText: 'E.g 2345678900', counterText: 'BVN', prefixIcon: null),
           const SizedBox(
-            height: 190.0,
+            height: 130.0,
           ),
           SizedBox(
             width: double.infinity,
             child: ResetPasswordButton(
-              text: 'Email OTP code',
+              text: 'Validate',
               buttonPressed: () {},
             ),
           ),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/common_widgets/common_icons.dart';
+import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';
 
 import '../../../../common_widgets/forms/otp_form.dart';
-import '../../../../common_widgets/otp_input_field.dart';
+import '../../../../common_widgets/input_fields/otp_input_field.dart';
 
 class OtpPage extends StatelessWidget {
   const OtpPage({super.key});

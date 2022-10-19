@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kml_digital_bank/common_widgets/info_input_field.dart';
-import 'package:kml_digital_bank/common_widgets/reset_password_button.dart';
+import 'package:kml_digital_bank/common_widgets/input_fields/info_input_field.dart';
+import 'package:kml_digital_bank/common_widgets/buttons/reset_password_button.dart';
 import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';

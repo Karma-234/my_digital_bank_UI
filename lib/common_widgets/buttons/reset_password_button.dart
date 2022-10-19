@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../core/app_colors.dart';
+import '../../core/app_colors.dart';
 
-class CommonButton extends StatelessWidget {
-  const CommonButton({
+class ResetPasswordButton extends StatelessWidget {
+  const ResetPasswordButton({
     Key? key,
     required this.text,
-    required this.color,
     required this.buttonPressed,
   }) : super(key: key);
-
   final String text;
-  final Color color;
   final Function() buttonPressed;
 
   @override
@@ -20,8 +17,8 @@ class CommonButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: buttonPressed,
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(287, 48),
-        backgroundColor: color,
+        fixedSize: const Size(311.0, 48.0),
+        backgroundColor: AppColors.secondary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
@@ -30,7 +27,7 @@ class CommonButton extends StatelessWidget {
         text,
         style: GoogleFonts.inter(
             fontWeight: FontWeight.w300,
-            color: AppColors.secondary,
+            color: AppColors.primary,
             fontSize: 16.0),
       ),
     );

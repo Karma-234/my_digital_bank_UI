@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kml_digital_bank/common_widgets/common_icons.dart';
-import 'package:kml_digital_bank/common_widgets/info_input_field.dart';
-import 'package:kml_digital_bank/common_widgets/reset_password_button.dart';
+import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
 import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';
+
+import '../../../../common_widgets/forms/bvn_validation_form.dart';
 
 class BvnValidation extends StatelessWidget {
   const BvnValidation({super.key});
@@ -44,27 +44,7 @@ class BvnValidation extends StatelessWidget {
                     const SizedBox(
                       height: 90.0,
                     ),
-                    Form(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const InfoInputField(
-                              hintText: 'E.g 2345678900',
-                              counterText: 'BVN',
-                              prefixIcon: null),
-                          const SizedBox(
-                            height: 130.0,
-                          ),
-                          SizedBox(
-                            width: double.infinity,
-                            child: ResetPasswordButton(
-                              text: 'Validate',
-                              buttonPressed: () {},
-                            ),
-                          ),
-                        ],
-                      ),
-                    )
+                    const BvnValidationForm()
                   ],
                 ),
               )

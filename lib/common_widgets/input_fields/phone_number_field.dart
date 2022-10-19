@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 
-import '../core/app_colors.dart';
+import '../../core/app_colors.dart';
 
 class PhoneNumberField extends StatelessWidget {
   const PhoneNumberField({Key? key, required this.numberCounterText})

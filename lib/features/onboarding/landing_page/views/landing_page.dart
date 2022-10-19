@@ -4,8 +4,8 @@ import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';
 
-import '../../../../common_widgets/common_icons.dart';
-import '../../../../common_widgets/on_boarding_buttons.dart';
+import '../../../../common_widgets/buttons/common_icons.dart';
+import '../../../../common_widgets/buttons/on_boarding_buttons.dart';
 
 class SignUpPage extends StatelessWidget {
   SignUpPage({super.key});

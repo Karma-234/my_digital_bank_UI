@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../core/app_colors.dart';
-import '../password_form_field.dart';
+import '../input_fields/password_form_field.dart';
 
 class NewPasswordForm extends StatelessWidget {
   const NewPasswordForm({

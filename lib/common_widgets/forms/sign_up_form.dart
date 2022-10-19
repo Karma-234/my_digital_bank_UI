@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../info_input_field.dart';
-import '../phone_number_field.dart';
-import '../reset_password_button.dart';
+import '../input_fields/info_input_field.dart';
+import '../input_fields/phone_number_field.dart';
+import '../buttons/reset_password_button.dart';
 
 class SignUpForm extends StatelessWidget {
   const SignUpForm({
