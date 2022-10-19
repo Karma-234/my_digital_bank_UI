@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kml_digital_bank/features/onboarding/password_reset/views/otp_page.dart';
 
 import '../../core/app_colors.dart';
 import '../input_fields/info_input_field.dart';
@@ -29,7 +30,16 @@ class EmailVerificationForm extends StatelessWidget {
             width: double.infinity,
             child: ResetPasswordButton(
               text: 'Email OTP code',
-              buttonPressed: () {},
+              buttonPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const OtpPage();
+                    },
+                  ),
+                );
+              },
             ),
           ),
         ],

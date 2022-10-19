@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kml_digital_bank/features/onboarding/password_reset/views/new_password.dart';
-import 'package:kml_digital_bank/features/onboarding/password_reset/views/otp_page.dart';
-import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_change_success.dart';
-import 'package:kml_digital_bank/features/onboarding/password_reset/views/password_reset.dart';
+import 'package:kml_digital_bank/features/onboarding/landing_page/views/landing_page.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/bvn_validation.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/views/email_verification.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/views/new_user_sign_up.dart';
-
-import 'features/onboarding/landing_page/views/landing_page.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/photo_capture.dart';
 
 void main() {
   runApp(const MainApp());
@@ -23,7 +17,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const BvnValidation(),
+      home: const FaceCapture(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_up/views/email_verification.dart';
 
 import '../input_fields/info_input_field.dart';
 import '../input_fields/phone_number_field.dart';
@@ -37,7 +38,16 @@ class SignUpForm extends StatelessWidget {
             width: double.infinity,
             child: ResetPasswordButton(
               text: 'Sign Up',
-              buttonPressed: () {},
+              buttonPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const EmailVerification();
+                    },
+                  ),
+                );
+              },
             ),
           ),
         ],

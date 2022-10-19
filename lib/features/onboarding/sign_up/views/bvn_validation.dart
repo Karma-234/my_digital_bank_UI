@@ -38,11 +38,11 @@ class BvnValidation extends StatelessWidget {
                     ),
                     const SignUpTextHeader(header: 'BVN Validation'),
                     const SizedBox(
-                      height: 20.0,
+                      height: 5.0,
                     ),
                     const SignUpTextbody(textBody: bvnBody),
                     const SizedBox(
-                      height: 90.0,
+                      height: 40.0,
                     ),
                     const BvnValidationForm()
                   ],

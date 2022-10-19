@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../input_fields/info_input_field.dart';
 import '../buttons/reset_password_button.dart';
+import 'drop_down_form.dart';
 
 class BvnValidationForm extends StatelessWidget {
   const BvnValidationForm({
@@ -16,6 +17,13 @@ class BvnValidationForm extends StatelessWidget {
         children: [
           const InfoInputField(
               hintText: 'E.g 2345678900', counterText: 'BVN', prefixIcon: null),
+          const SizedBox(
+            height: 20.0,
+          ),
+          const SizedBox(
+            height: 43.0,
+            child: UserDropDownOptions(),
+          ),
           const SizedBox(
             height: 130.0,
           ),
