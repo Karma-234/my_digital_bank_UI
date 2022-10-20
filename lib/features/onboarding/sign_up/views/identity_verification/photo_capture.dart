@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
 import 'package:kml_digital_bank/common_widgets/buttons/reset_password_button.dart';
 import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_up/controller/camera_controller.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/face_capture_preview.dart';
 
 class FaceCapture extends StatelessWidget {
-  const FaceCapture({super.key});
-
+  FaceCapture({super.key});
+  final profileImageController = Get.put(ProfileImageController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,7 @@ class FaceCapture extends StatelessWidget {
                     const SizedBox(
                       height: 30.0,
                     ),
-                    Container(
+                    SizedBox(
                       height: 374.0,
                       width: 170.83,
                       child: Image(
@@ -57,14 +60,7 @@ class FaceCapture extends StatelessWidget {
                       child: ResetPasswordButton(
                         text: 'Take snapshot',
                         buttonPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return FacePreview();
-                              },
-                            ),
-                          );
+                          profileImageController.getImage(ImageSource.camera);
                         },
                       ),
                     ),
