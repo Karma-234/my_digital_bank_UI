@@ -9,12 +9,11 @@ import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_veri
 class ProfileImageController extends GetxController {
   static ProfileImageController get find => Get.find();
   final imagePicker = ImagePicker();
-  XFile? selectedImage;
+  late File selectedImage;
   Future getImage(ImageSource source) async {
     final proImage = await imagePicker.pickImage(source: source);
     if (proImage == null) return;
-    XFile? img = XFile(proImage.path);
+    File img = File(proImage.path);
     selectedImage = img;
-    Get.to(FacePreview());
   }
 }

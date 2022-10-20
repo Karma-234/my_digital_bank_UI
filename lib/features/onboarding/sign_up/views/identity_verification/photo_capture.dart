@@ -33,8 +33,8 @@ class FaceCapture extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    SignUpTextHeader(header: 'Face Capturing'),
-                    SignUpTextbody(textBody: 'Take a snapshot'),
+                    const SignUpTextHeader(header: 'Face Capturing'),
+                    const SignUpTextbody(textBody: 'Take a snapshot'),
                     const SizedBox(
                       height: 30.0,
                     ),
@@ -60,7 +60,15 @@ class FaceCapture extends StatelessWidget {
                       child: ResetPasswordButton(
                         text: 'Take snapshot',
                         buttonPressed: () {
-                          profileImageController.getImage(ImageSource.camera);
+                          profileImageController
+                              .getImage(ImageSource.camera)
+                              .then(
+                                (value) => Get.to(
+                                  () => FacePreview(
+                                    image: profileImageController.selectedImage,
+                                  ),
+                                ),
+                              );
                         },
                       ),
                     ),
