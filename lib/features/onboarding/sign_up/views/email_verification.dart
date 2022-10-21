@@ -25,8 +25,14 @@ class EmailVerification extends StatelessWidget {
                 SizedBox(
                   height: 147.0,
                 ),
-                SignUpTextHeader(header: 'Email Verification'),
-                SignUpTextbody(textBody: emailVerBody),
+                SignUpTextHeader(
+                  header: 'Email Verification',
+                  color: AppColors.secondary,
+                ),
+                SignUpTextbody(
+                  textBody: emailVerBody,
+                  color: AppColors.bvnColor,
+                ),
                 SizedBox(
                   height: 94.0,
                 ),

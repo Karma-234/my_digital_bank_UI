@@ -30,8 +30,14 @@ class IdentityVerificationScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SignUpTextHeader(header: 'Identity Verification'),
-                    const SignUpTextbody(textBody: idText),
+                    const SignUpTextHeader(
+                      header: 'Identity Verification',
+                      color: AppColors.secondary,
+                    ),
+                    const SignUpTextbody(
+                      textBody: idText,
+                      color: AppColors.bvnColor,
+                    ),
                     const SizedBox(
                       height: 70.0,
                     ),

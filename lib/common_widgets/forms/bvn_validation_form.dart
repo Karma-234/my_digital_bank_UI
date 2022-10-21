@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_up/controller/identity_capture_controller.dart';
 
 import '../input_fields/info_input_field.dart';
 import '../buttons/reset_password_button.dart';
 import 'drop_down_form.dart';
 
 class BvnValidationForm extends StatelessWidget {
-  const BvnValidationForm({
+  BvnValidationForm({
     Key? key,
   }) : super(key: key);
+  final idCapture = Get.put(IdentityController());
 
   @override
   Widget build(BuildContext context) {

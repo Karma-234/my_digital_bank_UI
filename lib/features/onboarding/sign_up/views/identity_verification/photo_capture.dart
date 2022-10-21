@@ -33,8 +33,14 @@ class FaceCapture extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SignUpTextHeader(header: 'Face Capturing'),
-                    const SignUpTextbody(textBody: 'Take a snapshot'),
+                    const SignUpTextHeader(
+                      header: 'Face Capturing',
+                      color: AppColors.secondary,
+                    ),
+                    const SignUpTextbody(
+                      textBody: 'Take a snapshot',
+                      color: AppColors.bvnColor,
+                    ),
                     const SizedBox(
                       height: 30.0,
                     ),
@@ -74,7 +80,10 @@ class FaceCapture extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const SignUpTextbody(textBody: 'Skip for now'),
+                      child: const SignUpTextbody(
+                        textBody: 'Skip for now',
+                        color: AppColors.bvnColor,
+                      ),
                     )
                   ],
                 ),

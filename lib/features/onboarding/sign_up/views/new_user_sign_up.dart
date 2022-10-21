@@ -46,8 +46,14 @@ class SignUpDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
-                    const SignUpTextHeader(header: 'Your Basic Info'),
-                    const SignUpTextbody(textBody: basicInfo),
+                    const SignUpTextHeader(
+                      header: 'Your Basic Info',
+                      color: AppColors.secondary,
+                    ),
+                    const SignUpTextbody(
+                      textBody: basicInfo,
+                      color: AppColors.bvnColor,
+                    ),
                     const SizedBox(
                       height: 20.12,
                     ),

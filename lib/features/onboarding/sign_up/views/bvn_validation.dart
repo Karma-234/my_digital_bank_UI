@@ -36,15 +36,21 @@ class BvnValidation extends StatelessWidget {
                         image: AssetImage('bgtrans'.png),
                       ),
                     ),
-                    const SignUpTextHeader(header: 'BVN Validation'),
+                    const SignUpTextHeader(
+                      header: 'BVN Validation',
+                      color: AppColors.secondary,
+                    ),
                     const SizedBox(
                       height: 5.0,
                     ),
-                    const SignUpTextbody(textBody: bvnBody),
+                    const SignUpTextbody(
+                      textBody: bvnBody,
+                      color: AppColors.bvnColor,
+                    ),
                     const SizedBox(
                       height: 40.0,
                     ),
-                    const BvnValidationForm()
+                    BvnValidationForm()
                   ],
                 ),
               )

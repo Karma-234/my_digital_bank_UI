@@ -1,3 +1,4 @@
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -13,7 +14,7 @@ import '../../controller/profile_image_controller.dart';
 
 class FacePreview extends StatefulWidget {
   const FacePreview({super.key, required this.image});
-  final image;
+  final dynamic image;
 
   @override
   State<FacePreview> createState() => _FacePreviewState();
@@ -62,12 +63,18 @@ class _FacePreviewState extends State<FacePreview> {
                       height: 20.0,
                     ),
                     ClipOval(
-                      child: Image.file(
-                        widget.image,
-                        height: 212,
-                        width: 212,
-                        fit: BoxFit.fill,
-                      ),
+                      child: widget.image == null
+                          ? const Icon(
+                              FluentIcons.camera_16_filled,
+                              size: 100.0,
+                              color: AppColors.prefixTextColor,
+                            )
+                          : Image.file(
+                              widget.image,
+                              height: 212,
+                              width: 212,
+                              fit: BoxFit.fill,
+                            ),
                     ),
                     const SizedBox(
                       height: 20.0,
