@@ -12,3 +12,5 @@ const String bvnBody =
     'We need to validate your BVN in \norder to give you an account number \n which will allow you to send and \nreceive money from banks.';
 const String facePrTxt =
     'Final task! Click the button below for ID card Verification.';
+const String idText =
+    'Choose yout type of identification and take a snapshot of it.';

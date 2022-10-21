@@ -7,8 +7,9 @@ import 'package:kml_digital_bank/common_widgets/buttons/on_boarding_buttons.dart
 import 'package:kml_digital_bank/core/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 import 'package:kml_digital_bank/core/text_strings.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/identity_card_verification.dart';
 
-import '../../controller/camera_controller.dart';
+import '../../controller/profile_image_controller.dart';
 
 class FacePreview extends StatefulWidget {
   const FacePreview({super.key, required this.image});
@@ -100,7 +101,9 @@ class _FacePreviewState extends State<FacePreview> {
                 child: CommonButton(
                   text: 'Proceed to ID card',
                   color: AppColors.buttonColor2,
-                  buttonPressed: () {},
+                  buttonPressed: () {
+                    Get.to(() => const IdentityVerificationScreen());
+                  },
                 ),
               ),
               const SizedBox(
