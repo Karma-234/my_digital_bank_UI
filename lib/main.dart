@@ -18,7 +18,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FaceCapture(),
+      home: ExistingUser(),
     );
   }
 }

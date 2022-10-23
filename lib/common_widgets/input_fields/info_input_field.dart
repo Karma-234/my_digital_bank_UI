@@ -4,19 +4,28 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/app_colors.dart';
 
 class InfoInputField extends StatelessWidget {
-  const InfoInputField(
-      {Key? key,
-      required this.hintText,
-      required this.counterText,
-      required this.prefixIcon})
-      : super(key: key);
+  const InfoInputField({
+    Key? key,
+    required this.hintText,
+    required this.counterText,
+    required this.prefixIcon,
+    this.controller,
+    this.validator,
+    this.keyboardType,
+  }) : super(key: key);
   final String hintText;
   final String counterText;
   final Widget? prefixIcon;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
+      validator: validator,
+      controller: controller,
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         prefixIconColor: AppColors.secondary,
