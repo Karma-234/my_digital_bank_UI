@@ -34,7 +34,7 @@ class ExistingUser extends StatelessWidget {
                   const EdgeInsets.only(right: 36.0, left: 36.0, bottom: 15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Welcome to ',

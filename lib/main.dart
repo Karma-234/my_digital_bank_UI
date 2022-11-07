@@ -23,6 +23,10 @@ class MainApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
           home: ExistingUser(),
+          builder: (context, child) => MediaQuery(
+            data: MediaQuery.of(context).copyWith(textScaleFactor: 1.sp),
+            child: child!,
+          ),
         );
       },
     );

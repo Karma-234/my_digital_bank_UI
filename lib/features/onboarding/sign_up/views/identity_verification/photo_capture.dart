@@ -12,6 +12,7 @@ class FaceCapture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.scaffoldColor2,
       body: ListView(
         children: [
