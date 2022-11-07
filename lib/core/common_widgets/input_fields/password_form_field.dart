@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../core/app_colors.dart';
+import '../../app_colors/app_colors.dart';
 
 class NewPasswordFormField extends StatelessWidget {
   const NewPasswordFormField({

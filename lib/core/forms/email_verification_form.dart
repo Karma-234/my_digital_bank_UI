@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:kml_digital_bank/features/onboarding/password_reset/views/otp_page.dart';
 
-import '../../core/app_colors.dart';
-import '../input_fields/info_input_field.dart';
-import '../buttons/reset_password_button.dart';
+import '../app_colors/app_colors.dart';
+import '../common_widgets/input_fields/info_input_field.dart';
+import '../common_widgets/buttons/reset_password_button.dart';
 
 class EmailVerificationForm extends StatelessWidget {
   const EmailVerificationForm({

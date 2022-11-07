@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../core/app_colors.dart';
+import '../../app_colors/app_colors.dart';
 
 class OtpInputField extends StatelessWidget {
   const OtpInputField({

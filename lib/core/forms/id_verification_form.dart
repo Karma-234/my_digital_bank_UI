@@ -7,9 +7,9 @@ import 'package:kml_digital_bank/features/onboarding/sign_up/controller/identity
 import 'package:kml_digital_bank/features/onboarding/sign_up/controller/profile_image_controller.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/idvalidation_preview.dart';
 
-import '../../core/app_colors.dart';
-import '../buttons/on_boarding_buttons.dart';
-import '../input_fields/info_input_field.dart';
+import '../app_colors/app_colors.dart';
+import '../common_widgets/buttons/on_boarding_buttons.dart';
+import '../common_widgets/input_fields/info_input_field.dart';
 import 'id_drop_down.dart';
 
 class IdentityVerificationForm extends StatelessWidget {

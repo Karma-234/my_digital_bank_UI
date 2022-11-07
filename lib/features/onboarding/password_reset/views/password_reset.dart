@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
 
-import 'package:kml_digital_bank/core/app_colors.dart';
-import 'package:kml_digital_bank/core/text_strings.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
+import 'package:kml_digital_bank/core/strings/text_strings.dart';
 
-import '../../../../common_widgets/buttons/reset_password_button.dart';
+import '../../../../core/common_widgets/buttons/reset_password_button.dart';
 
 class PhoneNumberPage extends StatelessWidget {
   const PhoneNumberPage({super.key});

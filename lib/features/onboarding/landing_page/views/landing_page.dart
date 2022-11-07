@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/core/app_colors.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
-import 'package:kml_digital_bank/core/text_strings.dart';
+import 'package:kml_digital_bank/core/strings/text_strings.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/new_user_sign_up.dart';
 
-import '../../../../common_widgets/buttons/common_icons.dart';
-import '../../../../common_widgets/buttons/on_boarding_buttons.dart';
+import '../../../../core/common_widgets/buttons/common_icons.dart';
+import '../../../../core/common_widgets/buttons/on_boarding_buttons.dart';
 
 class ExistingUser extends StatelessWidget {
   ExistingUser({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
-import 'package:kml_digital_bank/core/app_colors.dart';
-import 'package:kml_digital_bank/core/text_strings.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
+import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
+import 'package:kml_digital_bank/core/strings/text_strings.dart';
 
-import '../../../../../common_widgets/forms/id_verification_form.dart';
+import '../../../../../core/forms/id_verification_form.dart';
 
 class IdentityVerificationScreen extends StatelessWidget {
   const IdentityVerificationScreen({super.key});

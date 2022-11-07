@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../input_fields/otp_input_field.dart';
+import '../common_widgets/input_fields/otp_input_field.dart';
 
 class OtpForm extends StatelessWidget {
   const OtpForm({

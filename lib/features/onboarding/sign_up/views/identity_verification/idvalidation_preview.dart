@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/on_boarding_buttons.dart';
-import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
-import 'package:kml_digital_bank/core/app_colors.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/on_boarding_buttons.dart';
+import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 
 class IdPreviewScreen extends StatelessWidget {

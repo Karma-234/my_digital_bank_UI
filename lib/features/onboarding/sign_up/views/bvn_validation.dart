@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/common_widgets/text_header_and_body.dart';
-import 'package:kml_digital_bank/core/app_colors.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
+import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
-import 'package:kml_digital_bank/core/text_strings.dart';
+import 'package:kml_digital_bank/core/strings/text_strings.dart';
 
-import '../../../../common_widgets/forms/bvn_validation_form.dart';
+import '../../../../core/forms/bvn_validation_form.dart';
 
 class BvnValidation extends StatelessWidget {
   const BvnValidation({super.key});

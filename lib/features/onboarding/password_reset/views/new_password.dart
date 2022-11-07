@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/common_widgets/buttons/reset_password_button.dart';
-import 'package:kml_digital_bank/core/app_colors.dart';
+import 'package:kml_digital_bank/core/common_widgets/buttons/reset_password_button.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 
-import '../../../../common_widgets/forms/new_password_form.dart';
-import '../../../../common_widgets/input_fields/password_form_field.dart';
+import '../../../../core/forms/new_password_form.dart';
+import '../../../../core/common_widgets/input_fields/password_form_field.dart';
 
 class NewPasswordPage extends StatelessWidget {
   const NewPasswordPage({super.key});

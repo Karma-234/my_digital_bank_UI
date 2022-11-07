@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "49753969704",
+    "project_id": "kml-digital-bank",
+    "storage_bucket": "kml-digital-bank.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49753969704:android:35e904b4245c3e0ebd511d",
+        "android_client_info": {
+          "package_name": "com.example.kml_digital_bank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49753969704-3djevlkqnss6stkjnr3ct66ctcn3foag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0kMpT0Kainy4ucPhgRsH2jt6YL3-BwTw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49753969704-3djevlkqnss6stkjnr3ct66ctcn3foag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../core/app_colors.dart';
+import '../app_colors/app_colors.dart';
 
 class SignUpTextbody extends StatelessWidget {
   const SignUpTextbody({Key? key, required this.textBody, required this.color})
