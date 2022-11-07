@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
+import 'package:kml_digital_bank/core/common_widgets/text_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 import 'package:kml_digital_bank/core/strings/text_strings.dart';
@@ -36,14 +36,14 @@ class BvnValidation extends StatelessWidget {
                         image: AssetImage('bgtrans'.png),
                       ),
                     ),
-                    const SignUpTextHeader(
+                    const AppTextHeader(
                       header: 'BVN Validation',
                       color: AppColors.secondary,
                     ),
                     const SizedBox(
                       height: 5.0,
                     ),
-                    const SignUpTextbody(
+                    const AppTextBody(
                       textBody: bvnBody,
                       color: AppColors.bvnColor,
                     ),

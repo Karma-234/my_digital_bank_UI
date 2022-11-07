@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/core/common_widgets/buttons/reset_password_button.dart';
-import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
-import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
-import 'package:kml_digital_bank/core/extensions/string_extension.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/controller/profile_image_controller.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/face_capture_preview.dart';
+
+import '../../../../../controller/exports.dart';
+import '../../../../../core/exports.dart';
+import '../../../../exports.dart';
 
 class FaceCapture extends StatelessWidget {
   FaceCapture({super.key});
@@ -33,11 +30,11 @@ class FaceCapture extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SignUpTextHeader(
+                    const AppTextHeader(
                       header: 'Face Capturing',
                       color: AppColors.secondary,
                     ),
-                    const SignUpTextbody(
+                    const AppTextBody(
                       textBody: 'Take a snapshot',
                       color: AppColors.bvnColor,
                     ),
@@ -80,7 +77,7 @@ class FaceCapture extends StatelessWidget {
                     ),
                     TextButton(
                       onPressed: () {},
-                      child: const SignUpTextbody(
+                      child: const AppTextBody(
                         textBody: 'Skip for now',
                         color: AppColors.bvnColor,
                       ),

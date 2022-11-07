@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/controller/identity_capture_controller.dart';
+import 'package:kml_digital_bank/controller/identity_capture_controller.dart';
 
 import '../common_widgets/input_fields/info_input_field.dart';
 import '../common_widgets/buttons/reset_password_button.dart';

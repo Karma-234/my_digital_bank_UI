@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/core/common_widgets/text_header_and_body.dart';
+import 'package:kml_digital_bank/core/common_widgets/text_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/strings/text_strings.dart';
 
@@ -30,11 +30,11 @@ class IdentityVerificationScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SignUpTextHeader(
+                    const AppTextHeader(
                       header: 'Identity Verification',
                       color: AppColors.secondary,
                     ),
-                    const SignUpTextbody(
+                    const AppTextBody(
                       textBody: idText,
                       color: AppColors.bvnColor,
                     ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/core/common_widgets/buttons/on_boarding_buttons.dart';
-import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
-import 'package:kml_digital_bank/core/extensions/string_extension.dart';
+
+import '../../../../core/exports.dart';
 
 class PasswordSuccess extends StatelessWidget {
   const PasswordSuccess({super.key});

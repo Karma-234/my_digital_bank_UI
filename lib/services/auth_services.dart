@@ -23,4 +23,20 @@ class AuthService {
       return e;
     }
   }
+
+  Future deleteUser(String email) async {
+    try {
+      await _auth.currentUser!.delete();
+    } catch (e) {
+      return e.toString();
+    }
+  }
+
+  Future updateUserEmail(String email, String Password) async {
+    try {
+      await _auth.currentUser!.updateEmail(email);
+    } catch (e) {
+      return e.toString();
+    }
+  }
 }

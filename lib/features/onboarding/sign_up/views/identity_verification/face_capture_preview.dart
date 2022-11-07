@@ -10,7 +10,7 @@ import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 import 'package:kml_digital_bank/core/strings/text_strings.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/identity_card_verification.dart';
 
-import '../../controller/profile_image_controller.dart';
+import '../../../../../controller/profile_image_controller.dart';
 
 class FacePreview extends StatefulWidget {
   const FacePreview({super.key, required this.image});

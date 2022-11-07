@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/controller/identity_capture_controller.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/controller/profile_image_controller.dart';
+import 'package:kml_digital_bank/controller/identity_capture_controller.dart';
+import 'package:kml_digital_bank/controller/profile_image_controller.dart';
 import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/idvalidation_preview.dart';
 
 import '../app_colors/app_colors.dart';
