@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kml_digital_bank/core/common_widgets/input_fields/info_input_field.dart';
 import 'package:kml_digital_bank/core/common_widgets/buttons/reset_password_button.dart';
 import 'package:kml_digital_bank/core/common_widgets/text_widgets/text_header_and_body.dart';
@@ -17,7 +18,7 @@ class EmailVerification extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: const EdgeInsets.only(left: 32.0, right: 32.0),
+            padding: const EdgeInsets.only(left: 32.0, right: 32.0).w,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,

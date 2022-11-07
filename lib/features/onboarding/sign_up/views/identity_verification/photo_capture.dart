@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -43,8 +44,8 @@ class FaceCapture extends StatelessWidget {
                       height: 30.0,
                     ),
                     SizedBox(
-                      height: 374.0,
-                      width: 170.83,
+                      height: 374.0.h,
+                      width: 170.83.w,
                       child: Image(
                         image: AssetImage('facecapture'.png),
                       ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../app_colors/app_colors.dart';
@@ -8,19 +9,19 @@ class CommonButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.color,
-    required this.buttonPressed,
+    this.buttonPressed,
   }) : super(key: key);
 
   final String text;
   final Color color;
-  final Function() buttonPressed;
+  final Function()? buttonPressed;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: buttonPressed,
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(287, 48),
+        fixedSize: Size(287.w, 48.h),
         backgroundColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
@@ -31,7 +32,7 @@ class CommonButton extends StatelessWidget {
         style: GoogleFonts.inter(
             fontWeight: FontWeight.w300,
             color: AppColors.secondary,
-            fontSize: 16.0),
+            fontSize: 16.0.sp),
       ),
     );
   }

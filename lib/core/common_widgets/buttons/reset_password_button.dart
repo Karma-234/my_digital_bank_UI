@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../app_colors/app_colors.dart';
@@ -17,7 +18,7 @@ class ResetPasswordButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: buttonPressed,
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(311.0, 48.0),
+        fixedSize: Size(311.0.w, 48.0.h),
         backgroundColor: AppColors.secondary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
@@ -28,7 +29,7 @@ class ResetPasswordButton extends StatelessWidget {
         style: GoogleFonts.inter(
             fontWeight: FontWeight.w300,
             color: AppColors.primary,
-            fontSize: 16.0),
+            fontSize: 16.0.sp),
       ),
     );
   }

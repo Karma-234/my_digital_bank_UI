@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/core/extensions/string_extension.dart';
 
-import '../../app_colors/app_colors.dart';
+import '../../exports.dart';
 
 class PhoneNumberField extends StatelessWidget {
   const PhoneNumberField({
@@ -47,7 +47,7 @@ class PhoneNumberField extends StatelessWidget {
             ),
             OutlinedButton(
               style: OutlinedButton.styleFrom(
-                fixedSize: const Size(43, 28),
+                fixedSize: Size(43.w, 28.h),
                 side: const BorderSide(color: AppColors.secondary),
               ),
               onPressed: () {},

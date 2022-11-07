@@ -21,82 +21,82 @@ class ExistingUser extends StatelessWidget {
           image:
               DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SafeArea(
-              child: CommonBackIcon(
-                iconColor: AppColors.primary,
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: 30.0.w,
+            right: 40.w,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SafeArea(
+                child: CommonBackIcon(
+                  iconColor: AppColors.primary,
+                ),
               ),
-            ),
-            Container(
-              padding:
-                  const EdgeInsets.only(right: 36.0, left: 36.0, bottom: 15.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Welcome to ',
-                    style: GoogleFonts.inter(
-                      fontSize: 14.0.sp,
-                      fontWeight: FontWeight.w600,
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0).w,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const AppTextBody(
+                      textBody: 'Welcome to',
                       color: AppColors.primary,
                     ),
-                  ),
-                  Gap(
-                    20.0.h,
-                  ),
-                  Image.asset(
-                    'logo'.png,
-                    width: 148.w,
-                    fit: BoxFit.fill,
-                  ),
-                  Gap(46.86.h),
-                  Text(
-                    signUpText,
-                    style: GoogleFonts.inter(
+                    Gap(
+                      20.0.h,
+                    ),
+                    Image.asset(
+                      'logo'.png,
+                      width: 148.w,
+                      fit: BoxFit.fill,
+                    ),
+                    Gap(46.86.h),
+                    Text(
+                      signUpText,
+                      style: GoogleFonts.inter(
                         fontWeight: FontWeight.w300,
                         color: AppColors.primary,
-                        wordSpacing: 3.0.sp,
-                        fontSize: 14.0.sp),
-                  ),
-                  Gap(
-                    372.0.h,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: CommonButton(
-                      text: 'I am a new user',
-                      color: AppColors.primary,
-                      buttonPressed: () {
-                        Get.to(() => const SignUpDetails());
-                      },
+                        fontSize: 14.0.sp,
+                        height: 24.0.sp / 14.0.sp,
+                      ),
                     ),
+                    Gap(
+                      372.0.h,
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  CommonButton(
+                    text: 'I am a new user',
+                    color: AppColors.primary,
+                    buttonPressed: () {
+                      Get.to(() => const SignUpView());
+                    },
                   ),
                   Gap(
                     10.0.h,
                   ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: CommonButton(
-                      text: 'Sign in',
-                      color: AppColors.buttonColor2,
-                      buttonPressed: () {
-                        btmsheet.currentState!.showBottomSheet(
-                          (context) {
-                            return Container(
-                              height: 300.0,
-                            );
-                          },
-                        );
-                      },
-                    ),
+                  CommonButton(
+                    text: 'Sign in',
+                    color: AppColors.buttonColor2,
+                    buttonPressed: () {
+                      btmsheet.currentState!.showBottomSheet(
+                        (context) {
+                          return Container(
+                            height: 300.0,
+                          );
+                        },
+                      );
+                    },
                   ),
                 ],
               ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
