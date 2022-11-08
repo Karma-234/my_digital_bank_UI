@@ -15,21 +15,23 @@ class ResetPasswordButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: buttonPressed,
-      style: ElevatedButton.styleFrom(
-        fixedSize: Size(311.0.w, 48.0.h),
-        backgroundColor: AppColors.secondary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
+    return Center(
+      child: ElevatedButton(
+        onPressed: buttonPressed,
+        style: ElevatedButton.styleFrom(
+          fixedSize: Size(311.0.w, 48.0.h),
+          backgroundColor: AppColors.secondary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
+          ),
         ),
-      ),
-      child: Text(
-        text,
-        style: GoogleFonts.inter(
-            fontWeight: FontWeight.w300,
-            color: AppColors.primary,
-            fontSize: 16.0.sp),
+        child: Text(
+          text,
+          style: GoogleFonts.inter(
+              fontWeight: FontWeight.w300,
+              color: AppColors.primary,
+              fontSize: 16.0.sp),
+        ),
       ),
     );
   }

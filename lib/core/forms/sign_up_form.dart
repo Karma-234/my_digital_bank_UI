@@ -31,7 +31,7 @@ class SignUpForm extends StatelessWidget {
           ResetPasswordButton(
             text: 'Sign Up',
             buttonPressed: () {
-              Get.to(() => const EmailVerification());
+              Get.to(() => const EmailVerificationView());
             },
           ),
         ],

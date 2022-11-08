@@ -1,38 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/exports.dart';
 
-class NewPasswordPage extends StatelessWidget {
-  const NewPasswordPage({super.key});
+class NewPasswordView extends StatelessWidget {
+  const NewPasswordView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.scaffoldColor2,
-      body: ListView(
-        children: [
-          const SizedBox(
-            height: 153.0,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 35.0),
-            child: Text(
-              'New Password',
-              style: GoogleFonts.inder(
-                fontSize: 24.0,
-                color: AppColors.secondary,
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 29.0).w,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const NewPasswordForm(),
+            Center(
+              child: ResetPasswordButton(
+                text: 'Recover Password',
+                buttonPressed: () {},
               ),
             ),
-          ),
-          const NewPasswordForm(),
-          Center(
-            child: ResetPasswordButton(
-              text: 'Recover Password',
-              buttonPressed: () {},
-            ),
-          ),
-        ],
+            Gap(34.0.h),
+          ],
+        ),
       ),
     );
   }

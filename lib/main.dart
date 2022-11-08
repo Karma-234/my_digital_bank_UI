@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:kml_digital_bank/features/onboarding/landing_page/views/landing_page.dart';
+import 'package:kml_digital_bank/features/exports.dart';
 
 void main() {
   runApp(const MainApp());
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: ExistingUser(),
+          home: PhoneNumberView(),
           builder: (context, child) => MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.sp),
             child: child!,

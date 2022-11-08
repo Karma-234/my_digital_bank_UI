@@ -3,7 +3,7 @@ export 'onboarding/landing_page/views/landing_page.dart';
 export 'onboarding/password_reset/views/new_password.dart';
 export 'onboarding/password_reset/views/otp_page.dart';
 export 'onboarding/password_reset/views/password_change_success.dart';
-export 'onboarding/password_reset/views/password_reset.dart';
+export 'onboarding/password_reset/views/phone_number_view.dart';
 export 'onboarding/sign_up/views/bvn_validation.dart';
 export 'onboarding/sign_up/views/email_verification.dart';
 export 'onboarding/sign_up/views/identity_verification/face_capture_preview.dart';

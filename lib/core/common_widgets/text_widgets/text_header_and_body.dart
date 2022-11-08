@@ -33,7 +33,7 @@ class AppTextHeader extends StatelessWidget {
   const AppTextHeader(
       {Key? key,
       required this.header,
-      required this.color,
+      this.color = AppColors.secondary,
       this.fontSize = 24.0,
       this.height = 32.0})
       : super(key: key);

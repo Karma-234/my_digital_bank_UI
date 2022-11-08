@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../core/exports.dart';
 
-class PasswordSuccess extends StatelessWidget {
-  const PasswordSuccess({super.key});
+class PasswordSuccessView extends StatelessWidget {
+  const PasswordSuccessView({super.key});
 
   @override
   Widget build(BuildContext context) {

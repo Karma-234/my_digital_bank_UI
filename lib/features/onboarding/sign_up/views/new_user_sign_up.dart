@@ -23,7 +23,6 @@ class SignUpView extends StatelessWidget {
           children: [
             Expanded(
               child: ListView(
-                padding: EdgeInsets.zero,
                 children: [
                   Gap(19.25.h),
                   const CommonBackIcon(
@@ -39,32 +38,27 @@ class SignUpView extends StatelessWidget {
                     width: 320.0.w,
                   ),
                   Gap(11.25.h),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const AppTextHeader(
-                        header: 'Your Basic Info',
-                        color: AppColors.secondary,
-                      ),
-                      const AppTextBody(
-                        textBody: basicInfo,
-                        color: AppColors.bvnColor,
-                      ),
-                      Gap(66.0.h),
-                      const InfoInputField(
-                          hintText: 'Matthew Brown',
-                          counterText: 'Fullname',
-                          prefixIcon: null),
-                      Gap(68.0.h),
-                      const InfoInputField(
-                          hintText: 'E.g matthew@gmail.com',
-                          counterText: 'Email',
-                          prefixIcon: null),
-                      Gap(96.12.h),
-                      const PhoneNumberField(numberCounterText: 'PhoneNumber'),
-                      Gap(90.0.h),
-                    ],
+                  const AppTextHeader(
+                    header: 'Your Basic Info',
+                    color: AppColors.secondary,
                   ),
+                  const AppTextBody(
+                    textBody: basicInfo,
+                    color: AppColors.bvnColor,
+                  ),
+                  Gap(66.0.h),
+                  const InfoInputField(
+                      hintText: 'Matthew Brown',
+                      counterText: 'Fullname',
+                      prefixIcon: null),
+                  Gap(38.0.h),
+                  const InfoInputField(
+                      hintText: 'E.g matthew@gmail.com',
+                      counterText: 'Email',
+                      prefixIcon: null),
+                  Gap(36.12.h),
+                  const PhoneNumberField(numberCounterText: 'PhoneNumber'),
+                  Gap(50.0.h),
                 ],
               ),
             ),
@@ -72,7 +66,7 @@ class SignUpView extends StatelessWidget {
               child: ResetPasswordButton(
                 text: 'Sign Up',
                 buttonPressed: () {
-                  Get.to(() => const EmailVerification());
+                  Get.to(() => const EmailVerificationView());
                 },
               ),
             ),
