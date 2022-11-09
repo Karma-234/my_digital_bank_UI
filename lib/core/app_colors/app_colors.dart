@@ -10,4 +10,6 @@ class AppColors {
   static const Color prefixTextColor = Color(0xFF6A6D81);
   static const Color bvnColor = Color(0xFF898A8D);
   static const Color fadeColor = Color(0xFFB2DAAC);
+  static const Color black = Color(0xFF2A2536);
+  static const Color tile2 = Color(0xFFF6FFD3);
 }

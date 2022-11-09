@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
+
+import '../../exports.dart';
 
 class AppTextBody extends StatelessWidget {
   const AppTextBody({
@@ -21,9 +22,9 @@ class AppTextBody extends StatelessWidget {
     return Text(
       textBody,
       style: GoogleFonts.inter(
-        fontSize: fontSize,
+        fontSize: fontSize.sp,
         color: color,
-        height: height / fontSize,
+        height: height.sp / fontSize.sp,
       ),
     );
   }

@@ -18,3 +18,4 @@ export 'forms/id_verification_form.dart';
 export 'forms/new_password_form.dart';
 export 'forms/otp_form.dart';
 export 'forms/sign_up_form.dart';
+export 'common_widgets/buttons/icon_button.dart';

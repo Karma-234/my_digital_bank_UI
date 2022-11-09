@@ -11,4 +11,8 @@ export 'onboarding/sign_up/views/identity_verification/identity_card_verificatio
 export 'onboarding/sign_up/views/identity_verification/idvalidation_preview.dart';
 export 'onboarding/sign_up/views/identity_verification/photo_capture.dart';
 export 'onboarding/sign_up/views/new_user_sign_up.dart';
-export 'account_summary/home_view.dart';
+export 'account_summary/views/account_summary_view.dart';
+export 'account_summary/widgets/bottomnavbar.dart';
+export 'account_summary/views/scaffold_body/home_body.dart';
+export 'account_summary/widgets/button_card.dart';
+export 'account_summary/widgets/listtile_card.dart';

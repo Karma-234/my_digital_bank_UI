@@ -65,7 +65,7 @@ class SignInView extends StatelessWidget {
                       ResetPasswordButton(
                           text: 'Sign In',
                           buttonPressed: () {
-                            Get.to(() => const HomeView());
+                            Get.to(() => const AccountSummaryView());
                           }),
                       Gap(1.5.h),
                       Center(
