@@ -35,17 +35,20 @@ class AppTextHeader extends StatelessWidget {
       required this.header,
       this.color = AppColors.secondary,
       this.fontSize = 24.0,
-      this.height = 32.0})
+      this.height = 32.0,
+      this.textAlign})
       : super(key: key);
   final String header;
   final Color? color;
   final double fontSize;
   final double height;
+  final TextAlign? textAlign;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       header,
+      textAlign: textAlign,
       style: GoogleFonts.inter(
         fontSize: fontSize.sp,
         color: color,

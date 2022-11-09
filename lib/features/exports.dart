@@ -1,8 +1,8 @@
 export 'onboarding/app_tour/views/splash_page.dart';
 export 'onboarding/landing_page/views/landing_page.dart';
-export 'onboarding/password_reset/views/new_password.dart';
-export 'onboarding/password_reset/views/otp_page.dart';
-export 'onboarding/password_reset/views/password_change_success.dart';
+export 'onboarding/password_reset/views/new_password_view.dart';
+export 'onboarding/password_reset/views/otp_view.dart';
+export 'onboarding/password_reset/views/password_change_success_view.dart';
 export 'onboarding/password_reset/views/phone_number_view.dart';
 export 'onboarding/sign_up/views/bvn_validation.dart';
 export 'onboarding/sign_up/views/email_verification.dart';
@@ -11,3 +11,4 @@ export 'onboarding/sign_up/views/identity_verification/identity_card_verificatio
 export 'onboarding/sign_up/views/identity_verification/idvalidation_preview.dart';
 export 'onboarding/sign_up/views/identity_verification/photo_capture.dart';
 export 'onboarding/sign_up/views/new_user_sign_up.dart';
+export 'account_summary/home_view.dart';

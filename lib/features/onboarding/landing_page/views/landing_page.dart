@@ -3,12 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kml_digital_bank/features/onboarding/sign_in/views/sign_in_view.dart';
 
 import '../../../../core/exports.dart';
 import '../../../exports.dart';
 
-class ExistingUser extends StatelessWidget {
-  ExistingUser({super.key});
+class ExistingUserView extends StatelessWidget {
+  ExistingUserView({super.key});
   final GlobalKey<ScaffoldState> btmsheet = GlobalKey();
 
   @override
@@ -84,13 +85,7 @@ class ExistingUser extends StatelessWidget {
                     text: 'Sign in',
                     color: AppColors.buttonColor2,
                     buttonPressed: () {
-                      btmsheet.currentState!.showBottomSheet(
-                        (context) {
-                          return Container(
-                            height: 300.0,
-                          );
-                        },
-                      );
+                      Get.to(() => const SignInView());
                     },
                   ),
                 ],

@@ -9,7 +9,8 @@ class NewPasswordFormField extends StatelessWidget {
       required this.hintPass,
       this.controller,
       this.validator,
-      this.counter = ''})
+      this.counter = '',
+      this.suffixText})
       : super(key: key);
   final String hintPass;
   final TextEditingController? controller;
@@ -21,6 +22,7 @@ class NewPasswordFormField extends StatelessWidget {
       color: AppColors.secondary,
     ),
   );
+  final String? suffixText;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +35,9 @@ class NewPasswordFormField extends StatelessWidget {
             color: AppColors.secondary,
           ),
           hintText: hintPass,
-          suffixText: 'Show',
+          hintStyle: const TextStyle(
+              color: AppColors.prefixTextColor, fontSize: 16, height: 24 / 16),
+          suffixText: suffixText,
           disabledBorder: inputBorder,
           enabled: true,
           enabledBorder: inputBorder,

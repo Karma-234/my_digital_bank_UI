@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kml_digital_bank/features/exports.dart';
 
 import '../../../../core/exports.dart';
 
@@ -22,7 +24,9 @@ class NewPasswordView extends StatelessWidget {
             Center(
               child: ResetPasswordButton(
                 text: 'Recover Password',
-                buttonPressed: () {},
+                buttonPressed: () {
+                  Get.to(() => const PasswordSuccessView());
+                },
               ),
             ),
             Gap(34.0.h),

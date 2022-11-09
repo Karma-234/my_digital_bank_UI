@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: PhoneNumberView(),
+          home: ExistingUserView(),
           builder: (context, child) => MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.sp),
             child: child!,
