@@ -43,7 +43,7 @@ class PasswordSuccessView extends StatelessWidget {
                 ),
                 CommonButton(
                   text: 'Proceed',
-                  color: AppColors.buttonColor2,
+                  btncolor: AppColors.buttonColor2,
                   buttonPressed: () {},
                 ),
                 const SizedBox(

@@ -78,7 +78,9 @@ class FaceCapture extends StatelessWidget {
                       ),
                     ),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(() => const AccountSummaryView());
+                      },
                       child: const AppTextBody(
                         textBody: 'Skip for now',
                         color: AppColors.bvnColor,

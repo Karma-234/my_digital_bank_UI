@@ -7,8 +7,8 @@ import 'package:kml_digital_bank/core/strings/text_strings.dart';
 
 import '../../../../core/forms/bvn_validation_form.dart';
 
-class BvnValidation extends StatelessWidget {
-  const BvnValidation({super.key});
+class BvnValidationView extends StatelessWidget {
+  const BvnValidationView({super.key});
 
   @override
   Widget build(BuildContext context) {

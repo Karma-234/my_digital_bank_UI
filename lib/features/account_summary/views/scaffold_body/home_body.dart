@@ -4,12 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:kml_digital_bank/controller/user_info-controller.dart';
 
 import '../../../../core/exports.dart';
 import '../../../exports.dart';
 
 class HomeBody extends StatelessWidget {
   HomeBody({super.key});
+  final userController = Get.put(UserInfoController());
 
   @override
   Widget build(BuildContext context) {
@@ -22,18 +24,22 @@ class HomeBody extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 25.r,
+                foregroundImage: Image.file(
+                  userController.imgctrl.selectedImage,
+                  fit: BoxFit.fill,
+                ).image,
               ),
               Gap(9.0.w),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  AppTextBody(
+                children: [
+                  const AppTextBody(
                     textBody: 'Welcome',
                     color: AppColors.secondary,
                   ),
                   AppTextBody(
-                    textBody: 'Matthew Brown',
+                    textBody: userController.nametxt.value,
                     color: AppColors.secondary,
                   )
                 ],
@@ -116,7 +122,7 @@ class HomeBody extends StatelessWidget {
               ButtonCard(onPressed: () {}, label: 'More', icon: Icons.window),
               Gap(13.0.w),
             ],
-          )
+          ),
         ],
       ),
     );

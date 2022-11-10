@@ -86,7 +86,7 @@ class SignInView extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              Get.to(() => const SignUpView());
+                              Get.to(() => SignUpView());
                             },
                             child: const AppTextHeader(
                               header: 'Sign up',

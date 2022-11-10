@@ -5,22 +5,25 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../exports.dart';
 
 class AppTextBody extends StatelessWidget {
-  const AppTextBody({
-    Key? key,
-    required this.textBody,
-    this.color = AppColors.textColor,
-    this.fontSize = 18.0,
-    this.height = 24.0,
-  }) : super(key: key);
+  const AppTextBody(
+      {Key? key,
+      required this.textBody,
+      this.color = AppColors.textColor,
+      this.fontSize = 18.0,
+      this.height = 24.0,
+      this.alignment})
+      : super(key: key);
   final String textBody;
   final Color? color;
   final double fontSize;
   final double height;
+  final TextAlign? alignment;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       textBody,
+      textAlign: alignment,
       style: GoogleFonts.inter(
         fontSize: fontSize.sp,
         color: color,

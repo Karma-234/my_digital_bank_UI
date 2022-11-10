@@ -1,6 +1,6 @@
 export 'app_colors/app_colors.dart';
 export 'common_widgets/buttons/common_icons.dart';
-export 'common_widgets/buttons/on_boarding_buttons.dart';
+export 'common_widgets/buttons/app_button.dart';
 export 'common_widgets/buttons/reset_password_button.dart';
 export 'extensions/string_extension.dart';
 export 'strings/text_strings.dart';

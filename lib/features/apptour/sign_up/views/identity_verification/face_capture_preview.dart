@@ -3,14 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kml_digital_bank/core/common_widgets/buttons/common_icons.dart';
-import 'package:kml_digital_bank/core/common_widgets/buttons/on_boarding_buttons.dart';
-import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
-import 'package:kml_digital_bank/core/extensions/string_extension.dart';
-import 'package:kml_digital_bank/core/strings/text_strings.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/identity_card_verification.dart';
 
-import '../../../../../controller/profile_image_controller.dart';
+import '../../../../../controller/exports.dart';
+import '../../../../../core/exports.dart';
+import '../../../../exports.dart';
 
 class FacePreview extends StatefulWidget {
   const FacePreview({super.key, required this.image});
@@ -107,9 +103,9 @@ class _FacePreviewState extends State<FacePreview> {
                 width: double.infinity,
                 child: CommonButton(
                   text: 'Proceed to ID card',
-                  color: AppColors.buttonColor2,
+                  btncolor: AppColors.buttonColor2,
                   buttonPressed: () {
-                    Get.to(() => const IdentityVerificationScreen());
+                    Get.to(() => const AccountSummaryView());
                   },
                 ),
               ),

@@ -12,6 +12,7 @@ class InfoInputField extends StatelessWidget {
     this.controller,
     this.validator,
     this.keyboardType,
+    this.onSaved,
   }) : super(key: key);
   final String hintText;
   final String counterText;
@@ -19,10 +20,12 @@ class InfoInputField extends StatelessWidget {
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
+  final Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onSaved: onSaved,
       keyboardType: keyboardType,
       validator: validator,
       controller: controller,

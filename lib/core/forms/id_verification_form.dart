@@ -5,10 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kml_digital_bank/controller/identity_capture_controller.dart';
 import 'package:kml_digital_bank/controller/profile_image_controller.dart';
-import 'package:kml_digital_bank/features/onboarding/sign_up/views/identity_verification/idvalidation_preview.dart';
+import 'package:kml_digital_bank/features/apptour/sign_up/views/identity_verification/idvalidation_preview.dart';
 
 import '../app_colors/app_colors.dart';
-import '../common_widgets/buttons/on_boarding_buttons.dart';
+import '../common_widgets/buttons/app_button.dart';
 import '../common_widgets/input_fields/info_input_field.dart';
 import 'id_drop_down.dart';
 
@@ -55,7 +55,7 @@ class IdentityVerificationForm extends StatelessWidget {
             width: double.infinity,
             child: CommonButton(
                 text: 'Validate ID',
-                color: AppColors.buttonColor2,
+                btncolor: AppColors.buttonColor2,
                 buttonPressed: () {
                   idVerificationController.getIdImage(ImageSource.camera).then(
                         (value) => Get.to(

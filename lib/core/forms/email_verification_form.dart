@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:kml_digital_bank/features/onboarding/password_reset/views/otp_view.dart';
+import 'package:kml_digital_bank/features/apptour/password_reset/views/otp_view.dart';
 
 import '../app_colors/app_colors.dart';
 import '../common_widgets/input_fields/info_input_field.dart';

@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kml_digital_bank/features/apptour/onboarding/views/walkthrough_view.dart';
 
 import '../../../../core/exports.dart';
 
@@ -7,9 +11,13 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.secondary,
-      body: DecoratedBox(
+    Timer(
+      const Duration(seconds: 2),
+      () => Get.off(() => OnboardingView()),
+    );
+    return Material(
+      color: AppColors.secondary,
+      child: DecoratedBox(
         decoration: BoxDecoration(
           image:
               DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
@@ -25,7 +33,3 @@ class SplashPage extends StatelessWidget {
     );
   }
 }
-
-// orig 120x60 -> 240x120
-
-// screen 240x700

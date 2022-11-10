@@ -51,6 +51,8 @@ dependencies:
   intl_phone_number_input: ^0.7.1
   font_awesome_flutter: ^10.2.1
   flutter_svg: ^1.1.6
+  email_validator: ^2.1.17
+  dots_indicator: ^2.1.0
 
 dev_dependencies:
   flutter_test:
