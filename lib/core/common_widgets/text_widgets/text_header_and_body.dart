@@ -11,7 +11,7 @@ class AppTextBody extends StatelessWidget {
       this.color = AppColors.textColor,
       this.fontSize = 18.0,
       this.height = 24.0,
-      this.alignment})
+      this.alignment = TextAlign.left})
       : super(key: key);
   final String textBody;
   final Color? color;
@@ -25,10 +25,10 @@ class AppTextBody extends StatelessWidget {
       textBody,
       textAlign: alignment,
       style: GoogleFonts.inter(
-        fontSize: fontSize.sp,
-        color: color,
-        height: height.sp / fontSize.sp,
-      ),
+          fontSize: fontSize.sp,
+          color: color,
+          height: height.sp / fontSize.sp,
+          fontWeight: FontWeight.w300),
     );
   }
 }
@@ -40,7 +40,7 @@ class AppTextHeader extends StatelessWidget {
       this.color = AppColors.secondary,
       this.fontSize = 24.0,
       this.height = 32.0,
-      this.textAlign})
+      this.textAlign = TextAlign.left})
       : super(key: key);
   final String header;
   final Color? color;

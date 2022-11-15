@@ -41,10 +41,8 @@ class PasswordSuccessView extends StatelessWidget {
                 const SizedBox(
                   height: 200.0,
                 ),
-                CommonButton(
-                  text: 'Proceed',
-                  btncolor: AppColors.buttonColor2,
-                  buttonPressed: () {},
+                AppButton(
+                  text: 'Reset Password',
                 ),
                 const SizedBox(
                   height: 85.0,

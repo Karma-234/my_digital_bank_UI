@@ -13,6 +13,7 @@ class AppButton extends StatelessWidget {
     this.txtcolor = AppColors.secondary,
     this.txtheight = 20.0,
     this.txtsize = 16.0,
+    this.btncolor = AppColors.buttonColor2,
   }) : super(key: key);
   final Function()? onPressed;
   final String text;
@@ -21,6 +22,7 @@ class AppButton extends StatelessWidget {
   final Color txtcolor;
   final double txtheight;
   final double txtsize;
+  final Color btncolor;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class AppButton extends StatelessWidget {
         height: btnheight.h,
         width: btnwidth.w,
         decoration: BoxDecoration(
-          color: AppColors.buttonColor2,
+          color: btncolor,
           borderRadius: BorderRadius.all(
             Radius.circular(12.0.r),
           ),
@@ -46,5 +48,30 @@ class AppButton extends StatelessWidget {
         ),
       ),
     ));
+  }
+}
+
+class SkipButton2 extends StatelessWidget {
+  const SkipButton2(
+      {Key? key,
+      this.txtColor = AppColors.textColor,
+      this.onTap,
+      this.txt = 'Skip for now'})
+      : super(key: key);
+  final Color txtColor;
+  final Function()? onTap;
+  final String txt;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: InkWell(
+        onTap: onTap,
+        child: AppTextBody(
+          textBody: txt,
+          color: txtColor,
+        ),
+      ),
+    );
   }
 }

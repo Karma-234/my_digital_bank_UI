@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../core/exports.dart';
 
 class BtmNavBar extends StatefulWidget {
-  const BtmNavBar({Key? key, required this.currentIndex, this.onTap})
+  const BtmNavBar({Key? key, this.currentIndex = 0, this.onTap})
       : super(key: key);
 
   final int currentIndex;

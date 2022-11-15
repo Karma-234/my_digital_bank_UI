@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+
 import 'package:kml_digital_bank/features/exports.dart';
 
 import '../../../../core/exports.dart';
@@ -38,27 +38,6 @@ class PhoneNumberView extends StatelessWidget {
                   ),
                   const AppTextBody(textBody: passReset),
                   Gap(97.0.h),
-                  InternationalPhoneNumberInput(
-                    inputDecoration: InputDecoration(
-                      enabled: true,
-                      border: inputBorder,
-                      disabledBorder: inputBorder,
-                      enabledBorder: inputBorder,
-                    ),
-                    isEnabled: true,
-                    initialValue: PhoneNumber(isoCode: 'NG'),
-                    onInputChanged: (PhoneNumber number) {},
-                    selectorConfig: const SelectorConfig(
-                        selectorType: PhoneInputSelectorType.DROPDOWN,
-                        trailingSpace: true,
-                        setSelectorButtonAsPrefixIcon: true),
-                    ignoreBlank: false,
-                    autoValidateMode: AutovalidateMode.disabled,
-                    selectorTextStyle: const TextStyle(color: Colors.black),
-                    formatInput: false,
-                    keyboardType: const TextInputType.numberWithOptions(
-                        signed: true, decimal: true),
-                  ),
                   Gap(91.0.h),
                 ],
               ),

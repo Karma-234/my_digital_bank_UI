@@ -9,13 +9,22 @@ import '../../../../core/exports.dart';
 import '../../../exports.dart';
 
 class ExistingUserView extends StatelessWidget {
-  ExistingUserView({super.key});
-  final GlobalKey<ScaffoldState> btmsheet = GlobalKey();
+  const ExistingUserView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: btmsheet,
+      appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0).r,
+          child: const CommonBackIcon(
+            iconColor: AppColors.primary,
+          ),
+        ),
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        backgroundColor: Colors.transparent.withOpacity(0),
+      ),
       backgroundColor: AppColors.secondary,
       body: DecoratedBox(
         decoration: BoxDecoration(
@@ -23,72 +32,50 @@ class ExistingUserView extends StatelessWidget {
               DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
         ),
         child: Padding(
-          padding: EdgeInsets.only(
-            left: 30.0.w,
-            right: 40.w,
+          padding: EdgeInsets.symmetric(
+            horizontal: 33.0.w,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SafeArea(
-                child: CommonBackIcon(
-                  iconColor: AppColors.primary,
-                ),
+              const AppTextBody(
+                textBody: 'Welcome to',
+                color: AppColors.primary,
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0).w,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const AppTextBody(
-                      textBody: 'Welcome to',
-                      color: AppColors.primary,
-                    ),
-                    Gap(
-                      20.0.h,
-                    ),
-                    Image.asset(
-                      'logo'.png,
-                      width: 148.w,
-                      fit: BoxFit.fill,
-                    ),
-                    Gap(46.86.h),
-                    Text(
-                      signUpText,
-                      style: GoogleFonts.inter(
-                        fontWeight: FontWeight.w300,
-                        color: AppColors.primary,
-                        fontSize: 14.0.sp,
-                        height: 24.0.sp / 14.0.sp,
-                      ),
-                    ),
-                    Gap(
-                      372.0.h,
-                    ),
-                  ],
-                ),
+              Gap(
+                20.0.h,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  CommonButton(
-                    text: 'I am a new user',
-                    btncolor: AppColors.primary,
-                    buttonPressed: () {
-                      Get.to(() => SignUpView());
-                    },
-                  ),
-                  Gap(
-                    10.0.h,
-                  ),
-                  CommonButton(
-                    text: 'Sign in',
-                    btncolor: AppColors.buttonColor2,
-                    buttonPressed: () {
-                      Get.to(() => const SignInView());
-                    },
-                  ),
-                ],
+              Image.asset(
+                'logo'.png,
+                width: 148.w,
+                fit: BoxFit.fill,
+              ),
+              Gap(46.86.h),
+              const AppTextBody(
+                textBody: signUpText,
+                color: AppColors.primary,
+                fontSize: 14.0,
+              ),
+              Gap(
+                372.0.h,
+              ),
+              AppButton(
+                onPressed: () {
+                  Get.to(() => SignUpView());
+                },
+                btncolor: AppColors.primary,
+                text: 'I am a new user',
+                btnwidth: 287.0,
+              ),
+              Gap(
+                5.0.h,
+              ),
+              AppButton(
+                onPressed: () {
+                  Get.to(() => const SignInView());
+                },
+                text: 'Sign In',
+                btnwidth: 287.0,
               ),
             ],
           ),

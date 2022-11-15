@@ -6,7 +6,7 @@ import 'package:image_picker/image_picker.dart';
 class IdentityController extends GetxController {
   static IdentityController get find => Get.find();
   final _idPicker = ImagePicker();
-  late File? idImage;
+  File idImage = File('');
   Future getIdImage(ImageSource source) async {
     final img = await _idPicker.pickImage(source: source);
     if (img == null) return;

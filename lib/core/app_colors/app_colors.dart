@@ -12,4 +12,5 @@ class AppColors {
   static const Color fadeColor = Color(0xFFB2DAAC);
   static const Color black = Color(0xFF2A2536);
   static const Color tile2 = Color(0xFFF6FFD3);
+  static const Color txt2 = Color(0xFF9BD7BE);
 }

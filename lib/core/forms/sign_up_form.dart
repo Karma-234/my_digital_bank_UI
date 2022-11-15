@@ -27,14 +27,6 @@ class SignUpForm extends StatelessWidget {
                 counterText: 'Email',
                 prefixIcon: null),
             Gap(96.12.h),
-            const PhoneNumberField(numberCounterText: 'PhoneNumber'),
-            Gap(90.0.h),
-            ResetPasswordButton(
-              text: 'Sign Up',
-              buttonPressed: () {
-                Get.to(() => const BvnValidationView());
-              },
-            ),
           ],
         ),
       ),

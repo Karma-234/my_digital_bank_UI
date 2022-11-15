@@ -8,7 +8,6 @@ export 'common_widgets/input_fields/info_input_field.dart';
 export 'common_widgets/input_fields/otp_input_field.dart';
 export 'common_widgets/input_fields/password_form_field.dart';
 export 'common_widgets/input_fields/phone_number_field.dart';
-export 'common_widgets/text_widgets/info_field_text.dart';
 export 'common_widgets/text_widgets/text_header_and_body.dart';
 export 'forms/bvn_validation_form.dart';
 export 'forms/drop_down_form.dart';
