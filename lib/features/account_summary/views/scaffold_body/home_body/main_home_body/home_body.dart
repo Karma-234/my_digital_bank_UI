@@ -1,17 +1,27 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/controller/user_info-controller.dart';
+import 'package:kml_digital_bank/features/account_transfer/views/account_transfer_view.dart';
+import '../../../../../../core/exports.dart';
+import '../../../../../exports.dart';
+import '../../../../widgets/colchart_widget.dart';
+import '../../widgets/account_carousel_slider.dart';
+import '../../widgets/indicator.dart';
 
-import '../../../../core/exports.dart';
-import '../../../exports.dart';
+class HomeBody extends StatefulWidget {
+  const HomeBody({super.key});
 
-class HomeBody extends StatelessWidget {
-  HomeBody({super.key});
+  @override
+  State<HomeBody> createState() => _HomeBodyState();
+}
+
+class _HomeBodyState extends State<HomeBody> {
   final userController = Get.put(UserInfoController());
+  double dotIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,36 +53,20 @@ class HomeBody extends StatelessWidget {
                     color: AppColors.secondary,
                   )
                 ],
-              )
+              ),
             ],
           ),
           Gap(26.0.h),
-          Expanded(
-            child: ListView(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(
-                  height: 99.0.h,
-                  width: 239.0.w,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    color: AppColors.primary,
-                  ),
-                ),
-                Gap(21.0.w),
-                Container(
-                  height: 99.0.h,
-                  width: 239.0.w,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
-                    color: AppColors.primary,
-                  ),
-                ),
-              ],
-            ),
+          AccountCarouselSlider(
+            pageChanged: (p0, p1) {
+              setState(() {
+                dotIndex = p0.toDouble();
+              });
+            },
           ),
-          Gap(43.0.h),
+          Gap(23.0.h),
+          Indicator(dotIndex: dotIndex, dotCount: 3),
+          Gap(13.0.h),
           Container(
             padding: const EdgeInsets.all(10.0).r,
             height: 223.0.h,
@@ -81,7 +75,7 @@ class HomeBody extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(13.0)),
               color: AppColors.primary,
             ),
-            child: SvgPicture.asset('chart'.svg),
+            child: ColChart(index: dotIndex),
           ),
           Gap(12.39.h),
           Expanded(
@@ -108,7 +102,9 @@ class HomeBody extends StatelessWidget {
           Row(
             children: [
               ButtonCard(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => const AccountTransferView());
+                },
                 icon: Icons.compare_arrows_outlined,
                 label: 'Quick Transfer',
               ),
@@ -119,7 +115,11 @@ class HomeBody extends StatelessWidget {
                 icon: Icons.wallet,
               ),
               Gap(9.0.w),
-              ButtonCard(onPressed: () {}, label: 'More', icon: Icons.window),
+              ButtonCard(
+                onPressed: () {},
+                label: 'More',
+                icon: Icons.window,
+              ),
               Gap(13.0.w),
             ],
           ),

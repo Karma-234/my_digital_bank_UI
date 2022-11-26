@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 
 import '../../../core/exports.dart';
 import '../../exports.dart';
+import 'scaffold_body/home_body/sub_home_body/view/home_history_view.dart';
 
 class AccountSummaryView extends StatefulWidget {
   const AccountSummaryView({super.key});
@@ -44,12 +45,13 @@ class _HomeViewState extends State<AccountSummaryView> {
           const AppBarIconButton(
             icon: FontAwesomeIcons.bell,
           ),
-          const AppBarIconButton(
+          AppBarIconButton(
             icon: Icons.settings,
+            onpressed: () => Get.to(() => const HomeHistoryView()),
           ),
           AppBarIconButton(
             icon: FontAwesomeIcons.powerOff,
-            onpressed: () => Get.offAll(() => ExistingUserView()),
+            onpressed: () => Get.offAll(() => const ExistingUserView()),
           ),
         ],
       ),

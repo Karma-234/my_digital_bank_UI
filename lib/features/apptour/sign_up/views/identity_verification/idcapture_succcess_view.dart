@@ -10,6 +10,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/exports.dart';
+import 'package:kml_digital_bank/features/account_transfer/views/transfer_succesful_view.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/views/user_profile_view.dart';
 
@@ -27,11 +28,7 @@ class IdCaptureSuccessView extends StatelessWidget {
       showImg: false,
       showBkIcon: false,
       children: [
-        Icon(
-          FontAwesomeIcons.circleCheck,
-          color: AppColors.txt2,
-          size: 151.0.r,
-        ),
+        SucessWidget(),
         Gap(20.0.h),
         AppTextBody(
           textBody: 'Success!',

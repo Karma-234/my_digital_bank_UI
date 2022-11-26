@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
+import 'package:kml_digital_bank/features/account_transfer/views/transfer_succesful_view.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/views/device_transfer_view.dart';
 
 import '../../../../core/exports.dart';
@@ -26,11 +27,7 @@ class UserCreateSuccessView extends StatelessWidget {
       showImg: false,
       showBkIcon: false,
       children: [
-        Icon(
-          FontAwesomeIcons.circleCheck,
-          color: AppColors.txt2,
-          size: 151.0.r,
-        ),
+        SucessWidget(),
         Gap(20.0.h),
         AppTextBody(
           textBody: 'Success!',

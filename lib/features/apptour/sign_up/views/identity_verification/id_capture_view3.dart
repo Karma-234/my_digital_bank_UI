@@ -14,7 +14,7 @@ import 'package:kml_digital_bank/features/apptour/sign_up/views/identity_verific
 
 class IdCaptureView3 extends StatelessWidget {
   IdCaptureView3({super.key});
-  final idCtrl = Get.put(IdentityController());
+  final idCtrl = Get.put(IdentityController(), permanent: true);
 
   @override
   Widget build(BuildContext context) {
@@ -38,21 +38,26 @@ class IdCaptureView3 extends StatelessWidget {
       ],
       children: [
         Gap(15.0.h),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(16.0.r),
-            ),
+        ClipRRect(
+          borderRadius: BorderRadius.all(
+            Radius.circular(16.0.r),
           ),
-          height: 170.0.h,
-          width: 293.0.w,
-          child: Image.file(
-            idCtrl.idImage,
-            fit: BoxFit.fill,
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.0.r),
+              ),
+            ),
+            height: 170.0.h,
+            width: 293.0.w,
+            child: Image.file(
+              idCtrl.idImage,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
         Gap(162.95.h),
-        AppTextBody(
+        const AppTextBody(
           textBody: 'You are done.',
           color: AppColors.txt2,
           alignment: TextAlign.center,

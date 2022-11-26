@@ -5,10 +5,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/controller/user_info-controller.dart';
-import 'package:kml_digital_bank/core/common_widgets/app_timer/app_timer_widget.dart';
 import 'package:kml_digital_bank/core/common_widgets/input_fields/otp_input_field.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/views/email_verification_done_view.dart';
+
+import '../../../../controller/mobx_controllers/timer_controller.dart';
 
 class EmailOtpView extends StatelessWidget {
   EmailOtpView({super.key});
@@ -32,10 +33,10 @@ class EmailOtpView extends StatelessWidget {
           },
         ),
         Gap(10.0.h),
-        AppTimerWidget(
-          duration: const Duration(minutes: 5),
-          onResend: () async {},
-        ),
+        AppTimer(
+          duration: const Duration(minutes: 2),
+          resend: () async {},
+        )
       ],
     );
   }

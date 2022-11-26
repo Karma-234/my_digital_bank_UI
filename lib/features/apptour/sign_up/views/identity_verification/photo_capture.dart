@@ -11,7 +11,7 @@ import '../../../../exports.dart';
 
 class PhotoCaptureView extends StatelessWidget {
   PhotoCaptureView({super.key});
-  final captureCtrl = Get.put(ProfileImageController());
+  final captureCtrl = Get.put(ProfileImageController(), permanent: true);
   @override
   Widget build(BuildContext context) {
     return UserInfoScaffold(

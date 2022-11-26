@@ -16,7 +16,7 @@ class DeviceTransferView1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return UserInfoScaffold(
-      key: verifKey,
+      formkey: verifKey,
       showImg: false,
       showBkIcon: false,
       headerTxt: 'Email verification',
@@ -24,7 +24,11 @@ class DeviceTransferView1 extends StatelessWidget {
           'Verify your email address. An OTP code will be sent to your email.',
       btns: [
         AppButton(
-          onPressed: () => Get.to(() => EmailOtpView()),
+          onPressed: () {
+            if (verifKey.currentState!.validate()) {
+              Get.to(() => EmailOtpView());
+            }
+          },
           text: 'Email OTP code',
           btncolor: AppColors.secondary,
           txtcolor: AppColors.primary,
@@ -33,7 +37,13 @@ class DeviceTransferView1 extends StatelessWidget {
       children: [
         InfoInputField(
           controller: emailverif.emailVerifctrl,
-          validator: (p0) => p0!.isEmpty ? 'Enter email' : null,
+          validator: (p0) {
+            return (p0?.isEmpty ?? true)
+                ? 'Enter email'
+                : p0 == emailverif.emailtxt.value
+                    ? null
+                    : 'Emails do not match';
+          },
           hintText: 'Enter email',
           counterText: 'Email address',
           prefixIcon: const Icon(

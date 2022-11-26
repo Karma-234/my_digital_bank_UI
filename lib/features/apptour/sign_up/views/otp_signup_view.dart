@@ -5,9 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
-import 'package:kml_digital_bank/controller/app_timer_controller.dart';
+import 'package:kml_digital_bank/controller/mobx_controllers/timer_controller.dart';
 import 'package:kml_digital_bank/controller/user_info-controller.dart';
-import 'package:kml_digital_bank/core/common_widgets/app_timer/app_timer_widget.dart';
 import 'package:kml_digital_bank/features/apptour/onboarding/views/reusable_widgets/skip_button.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 import 'package:kml_digital_bank/features/exports.dart';
@@ -42,10 +41,10 @@ class _OtpSignUpViewState extends State<OtpSignUpView> {
           },
         ),
         Gap(11.0.h),
-        AppTimerWidget(
+        AppTimer(
           duration: const Duration(minutes: 2),
-          onResend: () async {},
-        ),
+          resend: () async {},
+        )
       ],
     );
   }

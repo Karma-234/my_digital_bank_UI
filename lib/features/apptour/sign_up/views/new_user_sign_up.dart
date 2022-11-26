@@ -14,7 +14,7 @@ import '../reusable_widgets/userinfo_scaffold.dart';
 class SignUpView extends StatelessWidget {
   SignUpView({super.key});
 
-  final controller = Get.put(UserInfoController());
+  final controller = Get.put(UserInfoController(), permanent: true);
 
   final GlobalKey<FormState> signUpkey = GlobalKey();
 

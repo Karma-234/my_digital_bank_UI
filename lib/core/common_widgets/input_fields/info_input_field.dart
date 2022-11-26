@@ -33,6 +33,7 @@ class InfoInputField extends StatelessWidget {
       inputFormatters: inputFormat,
       onSaved: onSaved,
       onFieldSubmitted: onSaved,
+      //autovalidateMode: AutovalidateMode.onUserInteraction,
       keyboardType: keyboardType,
       validator: validator,
       controller: controller,
