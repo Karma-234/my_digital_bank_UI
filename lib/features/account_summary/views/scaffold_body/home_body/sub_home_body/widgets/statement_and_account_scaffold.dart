@@ -12,6 +12,7 @@ class StatementAndAccountSacffold extends StatefulWidget {
     this.secondBorder = false,
     this.showtitle = false,
     this.title = '',
+    this.inConAlign = CrossAxisAlignment.start,
   }) : super(key: key);
 
   List<Widget> preContainer;
@@ -19,6 +20,7 @@ class StatementAndAccountSacffold extends StatefulWidget {
   bool secondBorder;
   bool showtitle;
   final String title;
+  final CrossAxisAlignment inConAlign;
 
   @override
   State<StatementAndAccountSacffold> createState() =>

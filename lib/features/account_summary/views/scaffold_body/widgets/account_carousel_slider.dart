@@ -17,6 +17,21 @@ class AccountCarouselSlider extends StatelessWidget {
       child: CarouselSlider.builder(
         itemCount: 3,
         itemBuilder: (context, index, realIndex) {
+          if (index == 2) {
+            return Container(
+              margin: EdgeInsets.only(right: 20.w),
+              padding: EdgeInsets.all(12.0.r),
+              height: 99.0.h,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(13.0.r),
+                  ),
+                  border: Border.all(
+                      color: AppColors.black.withOpacity(0.2),
+                      style: BorderStyle.solid),
+                  color: Colors.transparent),
+            );
+          }
           return Container(
             margin: EdgeInsets.only(right: 20.w),
             padding: EdgeInsets.all(12.0.r),

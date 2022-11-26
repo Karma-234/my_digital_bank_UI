@@ -6,6 +6,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/controller/user_info-controller.dart';
 import 'package:kml_digital_bank/features/account_transfer/views/account_transfer_view.dart';
+import 'package:kml_digital_bank/features/quick_loan/views/quick_loan_view.dart';
 import '../../../../../../core/exports.dart';
 import '../../../../../exports.dart';
 import '../../../../widgets/colchart_widget.dart';
@@ -83,7 +84,9 @@ class _HomeBodyState extends State<HomeBody> {
               scrollDirection: Axis.horizontal,
               children: [
                 ListTileCard(
-                  onPressed: () {},
+                  onPressed: () {
+                    Get.to(() => QuickLoanView());
+                  },
                   img: 'moneysac',
                   text: 'Need a quick loan ?  We\'ve got you.',
                 ),

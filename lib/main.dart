@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/features/exports.dart';
 
 void main() {
@@ -26,8 +27,11 @@ class MainApp extends StatelessWidget {
         return GetMaterialApp(
           title: 'KML Digital Bank',
           theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
+              primarySwatch: Colors.blue,
+              dividerTheme: DividerThemeData(
+                thickness: 0.5,
+                color: AppColors.grey2,
+              )),
           home: const SplashPage(),
           builder: (context, child) => MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.sp),
