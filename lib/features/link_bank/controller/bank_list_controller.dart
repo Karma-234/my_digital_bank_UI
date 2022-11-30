@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class BankListController extends GetxController {
   static BankListController get find => Get.find();
   RxInt bankPicked = 0.obs;
-  RxInt index = 0.obs;
+  RxInt indexPicked = 0.obs;
   RxList<String> logoList = [
     'uba',
     'zenith',
@@ -49,6 +49,10 @@ class BankListController extends GetxController {
 
   indexPicker(int index) {
     bankPicked.value = index;
+  }
+
+  indexPicker2(int index) {
+    indexPicked.value = index;
   }
 
   @override

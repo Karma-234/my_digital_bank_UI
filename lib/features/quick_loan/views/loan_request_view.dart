@@ -1,13 +1,16 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/common_widgets/buttons/app_button.dart';
 import 'package:kml_digital_bank/core/common_widgets/text_widgets/text_header_and_body.dart';
 import 'package:kml_digital_bank/features/account_transfer/views/transfer_succesful_view.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
+import 'package:kml_digital_bank/features/exports.dart';
 
 class LoanRequestview extends StatelessWidget {
   const LoanRequestview({super.key});
@@ -21,7 +24,9 @@ class LoanRequestview extends StatelessWidget {
       btns: [
         AppButton(
           text: 'Okay',
-          onPressed: () {},
+          onPressed: () {
+            Get.to(() => AccountSummaryView());
+          },
         )
       ],
       children: [

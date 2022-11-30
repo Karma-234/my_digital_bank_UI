@@ -10,10 +10,12 @@ class Indicator extends StatelessWidget {
     Key? key,
     required this.dotIndex,
     required this.dotCount,
+    this.activeColor = AppColors.prefixTextColor,
   }) : super(key: key);
 
   final double dotIndex;
   final int dotCount;
+  final Color activeColor;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +24,8 @@ class Indicator extends StatelessWidget {
         dotsCount: dotCount,
         position: dotIndex,
         decorator: DotsDecorator(
-          color: AppColors.prefixTextColor.withOpacity(0.2),
-          activeColor: AppColors.prefixTextColor,
+          color: activeColor.withOpacity(0.2),
+          activeColor: activeColor,
           activeSize: Size(16.0.w, 5.0.h),
           size: Size(8.0.w, 5.0.h),
           shape: RoundedRectangleBorder(

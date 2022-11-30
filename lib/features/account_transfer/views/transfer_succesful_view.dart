@@ -49,8 +49,7 @@ class SucessWidget extends StatelessWidget {
       height: 151.0.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border:
-            Border.all(style: BorderStyle.solid, color: AppColors.fadeColor),
+        border: Border.all(style: BorderStyle.solid, color: color),
       ),
       child: Icon(
         icon,

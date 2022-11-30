@@ -24,33 +24,52 @@ class BankGridView extends StatelessWidget {
           crossAxisSpacing: 20.0.w),
       itemCount: ctrl.logoList.length,
       itemBuilder: (context, index) {
-        return ElevatedButton(
+        return LogoDispaly(
           onPressed: () {
             ctrl.indexPicker(index);
             Get.to(() => LinkingBankView());
           },
-          style: ElevatedButton.styleFrom(
-            shadowColor: AppColors.secondary.withOpacity(0.2),
-            backgroundColor: AppColors.primary,
-            elevation: 10.0,
-            fixedSize: Size(
-              140.0.w,
-              74.0.h,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(10.0.sp),
-              ),
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(20.0).r,
-            child: Image.asset(
-              ctrl.logoList[index].png,
-            ),
-          ),
+          asset: ctrl.logoList[index],
         );
       },
+    );
+  }
+}
+
+class LogoDispaly extends StatelessWidget {
+  const LogoDispaly({
+    Key? key,
+    this.onPressed,
+    this.asset = '',
+  }) : super(key: key);
+
+  final Function()? onPressed;
+  final String asset;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        shadowColor: AppColors.secondary.withOpacity(0.2),
+        backgroundColor: AppColors.primary,
+        elevation: 10.0,
+        fixedSize: Size(
+          140.0.w,
+          74.0.h,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10.0.sp),
+          ),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0).r,
+        child: Image.asset(
+          asset.png,
+        ),
+      ),
     );
   }
 }

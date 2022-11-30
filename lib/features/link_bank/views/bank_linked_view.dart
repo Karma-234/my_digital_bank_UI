@@ -6,9 +6,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/core/exports.dart';
+import 'package:kml_digital_bank/features/account_summary/views/account_summary_view.dart';
 import 'package:kml_digital_bank/features/account_transfer/views/transfer_succesful_view.dart';
 import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 import 'package:kml_digital_bank/features/link_bank/controller/bank_list_controller.dart';
+import 'package:kml_digital_bank/features/link_bank/views/find_bank_view.dart';
 
 class BankLinkedView extends StatelessWidget {
   BankLinkedView({super.key});
@@ -22,7 +24,9 @@ class BankLinkedView extends StatelessWidget {
       showPrevScaffold: true,
       btns: [
         AppButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.to(const AccountSummaryView());
+          },
           text: 'View linked account',
         ),
         Gap(23.0.h),
@@ -32,7 +36,9 @@ class BankLinkedView extends StatelessWidget {
             SkipButton2(
               txt: 'Link another account',
               txtColor: AppColors.primary,
-              onTap: () {},
+              onTap: () {
+                Get.to(() => FindBankView());
+              },
             ),
             const Icon(
               Icons.add_circle_rounded,

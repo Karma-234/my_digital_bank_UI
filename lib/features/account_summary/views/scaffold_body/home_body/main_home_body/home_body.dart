@@ -6,6 +6,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/controller/user_info-controller.dart';
 import 'package:kml_digital_bank/features/account_transfer/views/account_transfer_view.dart';
+import 'package:kml_digital_bank/features/payments/views/main_view/payment_view.dart';
 import 'package:kml_digital_bank/features/quick_loan/views/quick_loan_view.dart';
 import '../../../../../../core/exports.dart';
 import '../../../../../exports.dart';
@@ -113,7 +114,9 @@ class _HomeBodyState extends State<HomeBody> {
               ),
               Gap(9.0.w),
               ButtonCard(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(() => PaymentView());
+                },
                 label: 'Payments',
                 icon: Icons.wallet,
               ),

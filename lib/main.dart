@@ -27,11 +27,12 @@ class MainApp extends StatelessWidget {
         return GetMaterialApp(
           title: 'KML Digital Bank',
           theme: ThemeData(
-              primarySwatch: Colors.blue,
-              dividerTheme: DividerThemeData(
-                thickness: 0.5,
-                color: AppColors.grey2,
-              )),
+            primarySwatch: Colors.blue,
+            dividerTheme: const DividerThemeData(
+              thickness: 0.5,
+              color: AppColors.grey2,
+            ),
+          ),
           home: const SplashPage(),
           builder: (context, child) => MediaQuery(
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.sp),

@@ -24,8 +24,8 @@ class HomeHistoryView extends StatefulWidget {
 }
 
 class _HomeHistoryViewState extends State<HomeHistoryView> {
-  bool showSearch = false;
-  bool showCalendar = true;
+  bool showSearch = true;
+  bool showCalendar = false;
 
   @override
   Widget build(BuildContext context) {

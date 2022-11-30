@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/card_body/views/main_body/card_body.dart';
 
 import '../../../core/exports.dart';
 import '../../exports.dart';
@@ -21,10 +22,8 @@ class AccountSummaryView extends StatefulWidget {
 class _HomeViewState extends State<AccountSummaryView> {
   int myIndex = 0;
   List<Widget> indexPage = [
-    HomeBody(),
-    const Center(
-      child: AppTextHeader(header: 'Cards'),
-    ),
+    const HomeBody(),
+    CardBody(),
     const Center(
       child: AppTextHeader(header: 'Messaging'),
     ),
@@ -45,10 +44,7 @@ class _HomeViewState extends State<AccountSummaryView> {
           const AppBarIconButton(
             icon: FontAwesomeIcons.bell,
           ),
-          AppBarIconButton(
-            icon: Icons.settings,
-            onpressed: () => Get.to(() => const HomeHistoryView()),
-          ),
+          AppBarIconButton(icon: Icons.settings, onpressed: () {}),
           AppBarIconButton(
             icon: FontAwesomeIcons.powerOff,
             onpressed: () => Get.offAll(() => const ExistingUserView()),
