@@ -34,14 +34,14 @@ class InternetServiceView3 extends StatelessWidget {
         const SucessWidget(),
         Gap(23.0.h),
         const AppTextHeader(
-          header: 'Electricity Subscription Successful',
+          header: 'Internet Service Subscription Successful',
           color: AppColors.primary,
           textAlign: TextAlign.center,
         ),
         Gap(23.0.h),
         AppTextHeader(
           header:
-              'Card number 08034333000 has been recharged  with ${ctrl.powerName[ctrl.indexpicked.value]} bundle.',
+              'Phone number 0803433300 0 has been recharged  with ${ctrl.dataProvider[ctrl.indexpicked.value]} bundle.',
           color: AppColors.primary,
           textAlign: TextAlign.center,
         ),

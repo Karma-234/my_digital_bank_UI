@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:kml_digital_bank/features/payments/controller/payment_controller.dart';
 import 'package:kml_digital_bank/features/payments/views/sub_view/cable_tv_view/cable_tv_2.dart';
 import 'package:kml_digital_bank/features/payments/views/sub_view/electricity/electricity_view2.dart';
+import 'package:kml_digital_bank/features/payments/views/sub_view/internet_services/internet_service_view2.dart';
 
 import '../../../../link_bank/widgets/bank_grid_view.dart';
 import '../../../widgets/network_options.dart';
@@ -22,7 +23,7 @@ class InternetServiceView1 extends StatelessWidget {
         return LogoDispaly(
           onPressed: () {
             ctrl.setIndex(p1);
-            Get.to(() => ElectricityView2());
+            Get.to(() => InternetServiceView2());
           },
           asset: ctrl.dataProvider[p1],
         );

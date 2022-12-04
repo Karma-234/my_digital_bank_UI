@@ -7,7 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/core/exports.dart';
 import 'package:kml_digital_bank/features/account_opening/views/account_opened_view.dart';
-import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/home_body/sub_home_body/widgets/statement_and_account_scaffold.dart';
+import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/home/sub_home_body/widgets/statement_and_account_scaffold.dart';
 
 class AccountOpeningView2 extends StatelessWidget {
   const AccountOpeningView2({super.key});

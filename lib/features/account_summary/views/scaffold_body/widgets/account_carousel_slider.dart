@@ -6,7 +6,7 @@ import 'package:kml_digital_bank/features/account_opening/views/account_opening_
 import 'package:kml_digital_bank/features/account_transfer/views/account_transfer_view.dart';
 
 import '../../../../../core/exports.dart';
-import '../home_body/sub_home_body/view/home_history_view.dart';
+import '../home/sub_home_body/view/home_history_view.dart';
 
 class AccountCarouselSlider extends StatelessWidget {
   const AccountCarouselSlider({

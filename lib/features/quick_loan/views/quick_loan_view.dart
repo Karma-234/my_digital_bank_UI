@@ -9,7 +9,7 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/core/app_colors/app_colors.dart';
 import 'package:kml_digital_bank/core/exports.dart';
-import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/home_body/sub_home_body/widgets/statement_and_account_scaffold.dart';
+import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/home/sub_home_body/widgets/statement_and_account_scaffold.dart';
 import 'package:kml_digital_bank/features/account_transfer/widgets/haeder_texts.dart';
 import 'package:kml_digital_bank/features/quick_loan/views/loan_application_view.dart';
 

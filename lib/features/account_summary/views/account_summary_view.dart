@@ -6,11 +6,12 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/card_body/views/main_body/card_body.dart';
+import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/card/views/main_body/card_body.dart';
+import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/more/views/main_more_view.dart';
 
 import '../../../core/exports.dart';
 import '../../exports.dart';
-import 'scaffold_body/home_body/sub_home_body/view/home_history_view.dart';
+import 'scaffold_body/home/sub_home_body/view/home_history_view.dart';
 
 class AccountSummaryView extends StatefulWidget {
   const AccountSummaryView({super.key});
@@ -23,13 +24,11 @@ class _HomeViewState extends State<AccountSummaryView> {
   int myIndex = 0;
   List<Widget> indexPage = [
     const HomeBody(),
-    CardBody(),
+    const CardBody(),
     const Center(
       child: AppTextHeader(header: 'Messaging'),
     ),
-    const Center(
-      child: AppTextHeader(header: 'More'),
-    ),
+    MoreBody(),
   ];
   final style = TextStyle(fontSize: 10.0.sp);
   @override
