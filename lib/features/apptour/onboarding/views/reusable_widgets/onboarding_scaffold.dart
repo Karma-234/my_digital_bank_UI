@@ -6,18 +6,19 @@ import 'package:kml_digital_bank/core/exports.dart';
 import 'package:kml_digital_bank/features/apptour/onboarding/views/reusable_widgets/skip_button.dart';
 
 class OnboardingSkeleton extends StatelessWidget {
-  const OnboardingSkeleton({
-    Key? key,
-    required this.bodyTxt,
-    required this.headerTxt,
-    this.backgroundImage,
-    this.alignBgImg = Alignment.topLeft,
-    this.alignForeImg = Alignment.topLeft,
-    this.foreImg,
-    this.btmImg,
-    this.button,
-    required this.dotPosition,
-  }) : super(key: key);
+  const OnboardingSkeleton(
+      {Key? key,
+      required this.bodyTxt,
+      required this.headerTxt,
+      this.backgroundImage,
+      this.alignBgImg = Alignment.topLeft,
+      this.alignForeImg = Alignment.topLeft,
+      this.foreImg,
+      this.btmImg,
+      this.button,
+      required this.dotPosition,
+      this.onTap})
+      : super(key: key);
   final String headerTxt;
   final String bodyTxt;
   final String? backgroundImage;
@@ -27,6 +28,7 @@ class OnboardingSkeleton extends StatelessWidget {
   final String? btmImg;
   final Widget? button;
   final double dotPosition;
+  final Function(double)? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -90,6 +92,7 @@ class OnboardingSkeleton extends StatelessWidget {
                     Gap(19.0.h),
                     Center(
                       child: DotsIndicator(
+                        onTap: onTap,
                         dotsCount: 3,
                         position: dotPosition,
                         decorator: DotsDecorator(

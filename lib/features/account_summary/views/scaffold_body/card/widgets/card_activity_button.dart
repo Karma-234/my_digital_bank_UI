@@ -29,7 +29,6 @@ class CardActivityButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Gap(10.0.h),
         ElevatedButton(
           style: ElevatedButton.styleFrom(
               fixedSize: Size(width.w, height.h),

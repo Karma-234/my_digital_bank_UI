@@ -8,6 +8,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/card/views/main_body/card_body.dart';
 import 'package:kml_digital_bank/features/account_summary/views/scaffold_body/more/views/main_more_view.dart';
+import 'package:kml_digital_bank/features/apptour/sign_up/views/user_profile_view.dart';
+import 'package:kml_digital_bank/features/user_profile/views/user_profile1.dart';
 
 import '../../../core/exports.dart';
 import '../../exports.dart';
@@ -43,7 +45,12 @@ class _HomeViewState extends State<AccountSummaryView> {
           const AppBarIconButton(
             icon: FontAwesomeIcons.bell,
           ),
-          AppBarIconButton(icon: Icons.settings, onpressed: () {}),
+          AppBarIconButton(
+            icon: Icons.settings,
+            onpressed: () {
+              Get.to(() => UserProfile1());
+            },
+          ),
           AppBarIconButton(
             icon: FontAwesomeIcons.powerOff,
             onpressed: () => Get.offAll(() => const ExistingUserView()),

@@ -46,7 +46,9 @@ class _IdCaptureView2State extends State<IdCaptureView2> {
           },
         ),
         SkipButton2(
-          onTap: () {},
+          onTap: () {
+            Get.to(AccountSummaryView());
+          },
         ),
       ],
       children: [

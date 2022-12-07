@@ -55,9 +55,13 @@ class UserInfoScaffold extends StatelessWidget {
             ? AppColors.secondary
             : Colors.transparent.withOpacity(0),
         leading: showBkIcon
-            ? CommonBackIcon(
-                iconColor:
-                    showPrevScaffold ? AppColors.primary : AppColors.secondary,
+            ? Padding(
+                padding: const EdgeInsets.only(left: 22.0),
+                child: CommonBackIcon(
+                  iconColor: showPrevScaffold
+                      ? AppColors.primary
+                      : AppColors.secondary,
+                ),
               )
             : null,
       ),

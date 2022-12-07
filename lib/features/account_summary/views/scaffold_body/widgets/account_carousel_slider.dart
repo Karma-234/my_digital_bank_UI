@@ -49,7 +49,7 @@ class AccountCarouselSlider extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.only(right: 20.w),
               padding: EdgeInsets.all(12.0.r),
-              height: 99.0.h,
+              height: 120.0.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(
                     Radius.circular(13.0.r),
@@ -59,24 +59,25 @@ class AccountCarouselSlider extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
+                    children: [
                       AppTextBody(
                         textBody: 'SAVINGS ACCOUNT',
-                        height: 12.0,
-                        fontSize: 12.0,
+                        height: 12.0.sp,
+                        fontSize: 12.0.sp,
                         color: AppColors.prefixTextColor,
                       ),
                       AppTextBody(
                         textBody: '00034805403',
                         fontSize: 14.0,
-                        height: 18.0,
+                        height: 18.0.sp,
                         color: AppColors.black,
                       ),
                       AppTextHeader(
                         header: '#5,200,200',
-                        fontSize: 20.0,
+                        fontSize: 20.0.sp,
                       ),
                     ],
                   ),
@@ -111,7 +112,7 @@ class AccountCarouselSlider extends StatelessWidget {
             viewportFraction: 0.9,
             onPageChanged: pageChanged,
             enableInfiniteScroll: false,
-            height: 99.0.h,
+            height: 120.0.h,
             autoPlay: true,
             autoPlayCurve: Curves.elasticInOut,
             enlargeStrategy: CenterPageEnlargeStrategy.scale,

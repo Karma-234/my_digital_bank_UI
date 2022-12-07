@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 
 import 'package:kml_digital_bank/features/exports.dart';
 
@@ -18,40 +19,24 @@ class PhoneNumberView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: true,
-      backgroundColor: AppColors.scaffoldColor2,
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 27.0).w,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: ListView(
-                children: [
-                  const SafeArea(
-                    child: CommonBackIcon(iconColor: AppColors.secondary),
-                  ),
-                  Gap(82.25.h),
-                  const AppTextHeader(
-                    header: 'Password Reset',
-                  ),
-                  const AppTextBody(textBody: passReset),
-                  Gap(97.0.h),
-                  Gap(91.0.h),
-                ],
-              ),
-            ),
-            ResetPasswordButton(
-              text: 'Recover Password',
-              buttonPressed: () {
-                Get.to(() => const OtpResView());
-              },
-            ),
-            Gap(41.0.h),
-          ],
-        ),
-      ),
+    return UserInfoScaffold(
+      showImg: false,
+      headerTxt: 'Password reset',
+      bodyTxt: 'Enter your phone number to recover your password',
+      btns: [
+        AppButton(
+          btncolor: AppColors.secondary,
+          text: 'Recover password',
+          txtcolor: AppColors.primary,
+          onPressed: () {
+            Get.to(() => OtpResView());
+          },
+        )
+      ],
+      children: [
+        Gap(23.0.h),
+        PhoneNumberField(),
+      ],
     );
   }
 }

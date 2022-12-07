@@ -26,30 +26,34 @@ class NewSavingsTarget extends StatelessWidget {
           ),
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             const AppTextBody(
               textBody: 'Your target savings',
               fontSize: 11.0,
               height: 20.0,
             ),
-            Gap(190.0.w),
-            const AppTextHeader(
-              header: 'Add new target \nsavings',
-              fontSize: 10.0,
-              height: 12.0,
-              textAlign: TextAlign.end,
+            Row(
+              children: [
+                const AppTextHeader(
+                  header: 'Add new target \nsavings',
+                  fontSize: 10.0,
+                  height: 12.0,
+                  textAlign: TextAlign.end,
+                ),
+                Gap(5.0.w),
+                InkWell(
+                  onTap: () {
+                    Get.to(() => SavingsTarget1());
+                  },
+                  child: Icon(
+                    Icons.add,
+                    size: 17.0.sp,
+                    color: AppColors.secondary,
+                  ),
+                )
+              ],
             ),
-            Gap(5.0.w),
-            InkWell(
-              onTap: () {
-                Get.to(() => SavingsTarget1());
-              },
-              child: const Icon(
-                Icons.add,
-                size: 17.0,
-                color: AppColors.secondary,
-              ),
-            )
           ],
         ),
       ),

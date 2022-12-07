@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kml_digital_bank/features/account_summary/views/account_summary_view.dart';
+import 'package:kml_digital_bank/features/account_transfer/views/transfer_succesful_view.dart';
+import 'package:kml_digital_bank/features/apptour/sign_up/reusable_widgets/userinfo_scaffold.dart';
 
 import '../../../../core/exports.dart';
 
@@ -8,50 +14,28 @@ class PasswordSuccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.secondary,
-      body: DecoratedBox(
-        decoration: BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage('bg3'.png), fit: BoxFit.fill),
-        ),
-        child: ListView(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 147.0,
-                ),
-                SizedBox(
-                  height: 151.0,
-                  width: 151.0,
-                  child: Image(
-                    image: AssetImage('Success'.png),
-                  ),
-                ),
-                const SizedBox(
-                  height: 27.0,
-                ),
-                Text(
-                  'Password Changed',
-                  style: GoogleFonts.inter(
-                      color: AppColors.primary, fontSize: 18.0),
-                ),
-                const SizedBox(
-                  height: 200.0,
-                ),
-                AppButton(
-                  text: 'Reset Password',
-                ),
-                const SizedBox(
-                  height: 85.0,
-                ),
-              ],
-            ),
-          ],
-        ),
-      ),
+    return UserInfoScaffold(
+      showBkIcon: false,
+      showImg: false,
+      showPrevScaffold: true,
+      btns: [
+        AppButton(
+          text: 'Proceed',
+          onPressed: () {
+            Get.to(() => const AccountSummaryView());
+          },
+        )
+      ],
+      children: [
+        const SucessWidget(),
+        Gap(23.0.h),
+        const AppTextHeader(
+          header: 'Password changed!',
+          fontSize: 18.0,
+          color: AppColors.primary,
+          textAlign: TextAlign.center,
+        )
+      ],
     );
   }
 }

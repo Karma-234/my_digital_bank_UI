@@ -35,12 +35,14 @@ class _HomeBodyState extends State<HomeBody> {
           Row(
             children: [
               CircleAvatar(
-                radius: 25.r,
-                foregroundImage: Image.file(
-                  userController.imgctrl.selectedImage,
-                  fit: BoxFit.fill,
-                ).image,
-              ),
+                  radius: 25.r,
+                  foregroundImage:
+                      (userController.imgctrl.selectedImage == null)
+                          ? Image.asset('avatar'.png).image
+                          : Image.file(
+                              userController.imgctrl.selectedImage!,
+                              fit: BoxFit.fill,
+                            ).image),
               Gap(9.0.w),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

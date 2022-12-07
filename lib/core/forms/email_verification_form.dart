@@ -32,7 +32,7 @@ class EmailVerificationForm extends StatelessWidget {
             child: ResetPasswordButton(
               text: 'Email OTP code',
               buttonPressed: () {
-                Get.to(() => const OtpResView());
+                Get.to(() => OtpResView());
               },
             ),
           ),

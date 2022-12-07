@@ -32,7 +32,7 @@ class ExploreSavings extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Gap(34.0.h),
+          Gap(20.0.h),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -60,7 +60,6 @@ class ExploreSavings extends StatelessWidget {
                             height: 20.0,
                             fontSize: 18.0,
                           ),
-                          Gap(5.0.h),
                           const AppTextBody(
                             height: 15.0,
                             fontSize: 10.0,
@@ -71,7 +70,9 @@ class ExploreSavings extends StatelessWidget {
                       );
                     },
                     options: CarouselOptions(
-                        viewportFraction: 1.0, onPageChanged: pageChanged),
+                      viewportFraction: 1.0,
+                      onPageChanged: pageChanged,
+                    ),
                   ),
                 ),
                 Gap(1.0.h),

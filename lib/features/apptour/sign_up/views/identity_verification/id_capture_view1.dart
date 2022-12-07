@@ -39,7 +39,12 @@ class IdCaptureView1 extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 106.0.r,
-          backgroundImage: Image.file(imgCtrl.selectedImage).image,
+          backgroundImage: (imgCtrl.selectedImage == null)
+              ? Image.asset('avatar'.png).image
+              : Image.file(
+                  imgCtrl.selectedImage!,
+                  fit: BoxFit.fill,
+                ).image,
         ),
         Gap(35.0.h),
         SkipButton2(

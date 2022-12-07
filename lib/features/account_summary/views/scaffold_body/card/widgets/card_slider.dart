@@ -49,7 +49,7 @@ class CardSlider extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const AppTextBody(
@@ -62,7 +62,7 @@ class CardSlider extends StatelessWidget {
                     textBody: '₦12,937',
                     color: AppColors.primary,
                   ),
-                  Gap(15.0.h),
+                  Gap(10.0.h),
                   AppTextBody(
                     textBody: accName,
                     color: AppColors.grey,
@@ -115,7 +115,7 @@ class CardSlider extends StatelessWidget {
       },
       options: CarouselOptions(
         onPageChanged: onPageChanged,
-        height: 154.0.h,
+        height: 174.0.h,
         enlargeCenterPage: true,
         viewportFraction: 0.73,
       ),

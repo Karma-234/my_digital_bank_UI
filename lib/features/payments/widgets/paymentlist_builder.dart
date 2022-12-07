@@ -28,7 +28,7 @@ class PaymentlistBuilder extends StatelessWidget {
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 300,
-            mainAxisSpacing: 20.0.w,
+            mainAxisSpacing: 20.0.h,
             childAspectRatio: 2.0.h,
             crossAxisSpacing: 20.0.w),
         padding: EdgeInsets.zero,
@@ -56,7 +56,10 @@ class PaymentlistBuilder extends StatelessWidget {
             shadowColor: AppColors.secondary.withOpacity(0.9),
             widget: Padding(
               padding: const EdgeInsets.all(14.0),
-              child: Image.asset('${(ctrl.img[index])}'.png),
+              child: Image.asset(
+                '${(ctrl.img[index])}'.png,
+                height: 30.0.h,
+              ),
             ),
           );
         },
