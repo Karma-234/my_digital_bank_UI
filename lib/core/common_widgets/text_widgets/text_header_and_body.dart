@@ -5,14 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../exports.dart';
 
 class AppTextBody extends StatelessWidget {
-  const AppTextBody(
-      {Key? key,
-      required this.textBody,
-      this.color = AppColors.textColor,
-      this.fontSize = 18.0,
-      this.height = 24.0,
-      this.alignment = TextAlign.left})
-      : super(key: key);
+  const AppTextBody({
+    Key? key,
+    required this.textBody,
+    this.color = AppColors.textColor,
+    this.fontSize = 18.0,
+    this.height = 24.0,
+    this.alignment = TextAlign.left,
+  }) : super(
+          key: key,
+        );
   final String textBody;
   final Color? color;
   final double fontSize;
